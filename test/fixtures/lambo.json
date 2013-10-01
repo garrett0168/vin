@@ -1,0 +1,1461 @@
+{
+    "styleHolder": [{
+        "id": 200442000,
+        "makeId": 200005922,
+        "year": 2013,
+        "makeName": "Lamborghini",
+        "makeNiceName": "lamborghini",
+        "modelId": "Lamborghini_Aventador",
+        "modelName": "Aventador",
+        "modelNiceName": "aventador",
+        "modelYearId": 200441999,
+        "transmissionType": "AUTOMATED_MANUAL",
+        "engineType": "gas",
+        "engineCompressorType": "NA",
+        "engineFuelType": "premium unleaded (required)",
+        "engineCylinder": 12,
+        "engineSize": 6.5,
+        "trim": {
+            "name": "LP 700-4",
+            "niceName": "lp7004"
+        },
+        "categories": {
+            "PRIMARY_BODY_TYPE": ["Car"],
+            "Vehicle Style": ["Coupe"],
+            "Vehicle Type": ["Car"]
+        },
+        "attributeGroups": {
+            "MAIN": {
+                "id": 1,
+                "name": "MAIN",
+                "attributes": {
+                    "USE_IN_LEADS_FORM": {
+                        "id": 637,
+                        "name": "USE_IN_LEADS_FORM",
+                        "value": "Y"
+                    },
+                    "NAME": {
+                        "id": 1,
+                        "name": "NAME",
+                        "value": "LP 700-4 2dr Coupe AWD (6.5L 12cyl 7AM)"
+                    },
+                    "USE_IN_NEW": {
+                        "id": 10,
+                        "name": "USE_IN_NEW",
+                        "value": "Y"
+                    },
+                    "WORKFLOWSTATUS": {
+                        "id": 9223372036854775806,
+                        "name": "WORKFLOWSTATUS",
+                        "value": "Completed"
+                    },
+                    "USE_IN_USED": {
+                        "id": 11,
+                        "name": "USE_IN_USED",
+                        "value": "N"
+                    },
+                    "USE_IN_PRE_PRODUCTION": {
+                        "id": 12,
+                        "name": "USE_IN_PRE_PRODUCTION",
+                        "value": "N"
+                    },
+                    "USE_IN_FUTURE": {
+                        "id": 595,
+                        "name": "USE_IN_FUTURE",
+                        "value": "N"
+                    }
+                }
+            },
+            "AIR_CONDITIONING": {
+                "id": 9,
+                "name": "AIR_CONDITIONING",
+                "attributes": {
+                    "FRONT_AIR_CONDITIONING_ZONES": {
+                        "id": 85,
+                        "name": "FRONT_AIR_CONDITIONING_ZONES",
+                        "value": "single"
+                    },
+                    "FRONT_AIR_CONDITIONING": {
+                        "id": 84,
+                        "name": "FRONT_AIR_CONDITIONING",
+                        "value": "automatic climate control"
+                    },
+                    "SUN_SENSOR": {
+                        "id": 89,
+                        "name": "SUN_SENSOR",
+                        "value": "Sun sensor"
+                    }
+                }
+            },
+            "LEGACY": {
+                "id": 64,
+                "name": "LEGACY",
+                "attributes": {
+                    "ED_STYLE_ID": {
+                        "id": 4,
+                        "name": "ED_STYLE_ID",
+                        "value": "101329827"
+                    }
+                }
+            },
+            "BRAKE_SYSTEM": {
+                "id": 11,
+                "name": "BRAKE_SYSTEM",
+                "attributes": {
+                    "REAR_BRAKE_WIDTH": {
+                        "id": 108,
+                        "name": "REAR_BRAKE_WIDTH",
+                        "value": "1.5"
+                    },
+                    "FRONT_BRAKE_WIDTH": {
+                        "id": 105,
+                        "name": "FRONT_BRAKE_WIDTH",
+                        "value": "1.5"
+                    },
+                    "ELECTRONIC_BRAKEFORCE_DISTRIBUTION": {
+                        "id": 102,
+                        "name": "ELECTRONIC_BRAKEFORCE_DISTRIBUTION",
+                        "value": "electronic brakeforce distribution"
+                    },
+                    "REAR_BRAKE_TYPE": {
+                        "id": 109,
+                        "name": "REAR_BRAKE_TYPE",
+                        "value": "ceramic disc"
+                    },
+                    "FRONT_BRAKE_DIAMETER": {
+                        "id": 104,
+                        "name": "FRONT_BRAKE_DIAMETER",
+                        "value": "15.7"
+                    },
+                    "FRONT_BRAKE_TYPE": {
+                        "id": 106,
+                        "name": "FRONT_BRAKE_TYPE",
+                        "value": "ceramic disc"
+                    },
+                    "ANTILOCK_BRAKING_SYSTEM": {
+                        "id": 99,
+                        "name": "ANTILOCK_BRAKING_SYSTEM",
+                        "value": "4-wheel ABS"
+                    },
+                    "REAR_BRAKE_DIAMETER": {
+                        "id": 107,
+                        "name": "REAR_BRAKE_DIAMETER",
+                        "value": "15.0"
+                    }
+                }
+            },
+            "CRASH_TEST_RATINGS": {
+                "id": 16,
+                "name": "CRASH_TEST_RATINGS",
+                "attributes": {
+                    "BUMPER_BASH": {
+                        "id": 134,
+                        "name": "BUMPER_BASH",
+                        "value": "Not Tested"
+                    },
+                    "IIHS_ROOF_STRENGTH_TEST_RESULTS": {
+                        "id": 140,
+                        "name": "IIHS_ROOF_STRENGTH_TEST_RESULTS",
+                        "value": "Not Tested"
+                    },
+                    "IIHS_REAR_CRASH_PROTECTION/HEAD_RESTRAINT_RATINGS": {
+                        "id": 136,
+                        "name": "IIHS_REAR_CRASH_PROTECTION/HEAD_RESTRAINT_RATINGS",
+                        "value": "Not Tested"
+                    },
+                    "IIHS_MODERATE_OVERLAP_FRONT_TEST_RESULTS": {
+                        "id": 137,
+                        "name": "IIHS_MODERATE_OVERLAP_FRONT_TEST_RESULTS",
+                        "value": "Not Tested"
+                    },
+                    "IIHS_SIDE_IMPACT_TEST_RESULTS": {
+                        "id": 141,
+                        "name": "IIHS_SIDE_IMPACT_TEST_RESULTS",
+                        "value": "Not Tested"
+                    }
+                }
+            },
+            "MOBILE_CONNECTIVITY": {
+                "id": 31,
+                "name": "MOBILE_CONNECTIVITY",
+                "attributes": {
+                    "PHONE": {
+                        "id": 302,
+                        "name": "PHONE",
+                        "value": "pre-wired for phone"
+                    },
+                    "BLUETOOTH": {
+                        "id": 639,
+                        "name": "BLUETOOTH",
+                        "value": "Bluetooth"
+                    }
+                }
+            },
+            "MIRRORS": {
+                "id": 28,
+                "name": "MIRRORS",
+                "attributes": {
+                    "1ST_ROW_VANITY_MIRRORS": {
+                        "id": 268,
+                        "name": "1ST_ROW_VANITY_MIRRORS",
+                        "value": "dual vanity mirrors"
+                    },
+                    "HEATED_DRIVER_SIDE_MIRROR": {
+                        "id": 258,
+                        "name": "HEATED_DRIVER_SIDE_MIRROR",
+                        "value": "heated"
+                    },
+                    "PASSENGER_SIDE_MIRROR_ADJUSTMENT": {
+                        "id": 263,
+                        "name": "PASSENGER_SIDE_MIRROR_ADJUSTMENT",
+                        "value": "power"
+                    },
+                    "POWER_RETRACTABLE_SIDE_MIRRORS": {
+                        "id": 264,
+                        "name": "POWER_RETRACTABLE_SIDE_MIRRORS",
+                        "value": "power retractable mirrors"
+                    },
+                    "DRIVER_SIDE_MIRROR_ADJUSTMENT": {
+                        "id": 256,
+                        "name": "DRIVER_SIDE_MIRROR_ADJUSTMENT",
+                        "value": "power"
+                    },
+                    "HEATED_PASSENGER_SIDE_MIRROR": {
+                        "id": 259,
+                        "name": "HEATED_PASSENGER_SIDE_MIRROR",
+                        "value": "heated"
+                    }
+                }
+            },
+            "INTERIOR_TRIM": {
+                "id": 27,
+                "name": "INTERIOR_TRIM",
+                "attributes": {
+                    "DOOR_TRIM": {
+                        "id": 253,
+                        "name": "DOOR_TRIM",
+                        "value": "carbon and leather"
+                    },
+                    "DASH_TRIM": {
+                        "id": 252,
+                        "name": "DASH_TRIM",
+                        "value": "leather"
+                    },
+                    "CENTER_CONSOLE_TRIM": {
+                        "id": 251,
+                        "name": "CENTER_CONSOLE_TRIM",
+                        "value": "carbon and leather"
+                    }
+                }
+            },
+            "STEERING_WHEEL": {
+                "id": 41,
+                "name": "STEERING_WHEEL",
+                "attributes": {
+                    "STEERING_WHEEL_ADJUSTMENTS": {
+                        "id": 353,
+                        "name": "STEERING_WHEEL_ADJUSTMENTS",
+                        "value": "tilt and telescopic"
+                    },
+                    "TRANSMISSION_CONTROLS_ON_STEERING_WHEEL": {
+                        "id": 357,
+                        "name": "TRANSMISSION_CONTROLS_ON_STEERING_WHEEL",
+                        "value": "gear shift controls"
+                    },
+                    "STEERING_WHEEL_TRIM": {
+                        "id": 356,
+                        "name": "STEERING_WHEEL_TRIM",
+                        "value": "carbon, suede and leather"
+                    },
+                    "AUDIO_CONTROLS_ON_STEERING_WHEEL": {
+                        "id": 349,
+                        "name": "AUDIO_CONTROLS_ON_STEERING_WHEEL",
+                        "value": "audio controls"
+                    },
+                    "PHONE_CONTROLS_ON_STEERING_WHEEL": {
+                        "id": 355,
+                        "name": "PHONE_CONTROLS_ON_STEERING_WHEEL",
+                        "value": "phone controls on steering wheel"
+                    }
+                }
+            },
+            "NAVIGATION_SYSTEM": {
+                "id": 32,
+                "name": "NAVIGATION_SYSTEM",
+                "attributes": {
+                    "NAVIGATION_SYSTEM": {
+                        "id": 307,
+                        "name": "NAVIGATION_SYSTEM",
+                        "value": "hard drive based display w/voice activation and directions"
+                    }
+                }
+            },
+            "INSTRUMENTATION": {
+                "id": 25,
+                "name": "INSTRUMENTATION",
+                "attributes": {
+                    "COMPASS": {
+                        "id": 221,
+                        "name": "COMPASS",
+                        "value": "compass"
+                    },
+                    "TIRE_PRESSURE_MONITORING_SYSTEM": {
+                        "id": 227,
+                        "name": "TIRE_PRESSURE_MONITORING_SYSTEM",
+                        "value": "tire pressure monitoring"
+                    },
+                    "LOW_FUEL_LEVEL_INDICATOR": {
+                        "id": 455,
+                        "name": "LOW_FUEL_LEVEL_INDICATOR",
+                        "value": "low fuel level"
+                    },
+                    "TACHOMETER": {
+                        "id": 456,
+                        "name": "TACHOMETER",
+                        "value": "tachometer"
+                    },
+                    "CLOCK": {
+                        "id": 220,
+                        "name": "CLOCK",
+                        "value": "clock"
+                    }
+                }
+            },
+            "SEATBELTS": {
+                "id": 35,
+                "name": "SEATBELTS",
+                "attributes": {
+                    "SEATBELT_PRETENSIONERS": {
+                        "id": 458,
+                        "name": "SEATBELT_PRETENSIONERS",
+                        "value": "front"
+                    },
+                    "SEATBELT_FORCE_LIMITERS": {
+                        "id": 457,
+                        "name": "SEATBELT_FORCE_LIMITERS",
+                        "value": "front"
+                    }
+                }
+            },
+            "SUSPENSION": {
+                "id": 44,
+                "name": "SUSPENSION",
+                "attributes": {
+                    "ACTIVE_SUSPENSION": {
+                        "id": 379,
+                        "name": "ACTIVE_SUSPENSION",
+                        "value": "active suspension"
+                    },
+                    "FRONT_SUSPENSION_CLASSIFICATION": {
+                        "id": 385,
+                        "name": "FRONT_SUSPENSION_CLASSIFICATION",
+                        "value": "independent"
+                    },
+                    "INDEPENDENT_SUSPENSION": {
+                        "id": 387,
+                        "name": "INDEPENDENT_SUSPENSION",
+                        "value": "four-wheel"
+                    },
+                    "REAR_SPRING_TYPE": {
+                        "id": 390,
+                        "name": "REAR_SPRING_TYPE",
+                        "value": "coil springs"
+                    },
+                    "REAR_ARM_TYPE": {
+                        "id": 389,
+                        "name": "REAR_ARM_TYPE",
+                        "value": "lower control arms"
+                    },
+                    "REAR_SUSPENSION_TYPE": {
+                        "id": 393,
+                        "name": "REAR_SUSPENSION_TYPE",
+                        "value": "double wishbone"
+                    },
+                    "FRONT_ARM_TYPE": {
+                        "id": 382,
+                        "name": "FRONT_ARM_TYPE",
+                        "value": "lower control arms"
+                    },
+                    "REAR_SUSPENSION_CLASSIFICATION": {
+                        "id": 392,
+                        "name": "REAR_SUSPENSION_CLASSIFICATION",
+                        "value": "independent"
+                    },
+                    "FRONT_STABILIZER_BAR": {
+                        "id": 384,
+                        "name": "FRONT_STABILIZER_BAR",
+                        "value": "stabilizer bar"
+                    },
+                    "FRONT_SPRING_TYPE": {
+                        "id": 383,
+                        "name": "FRONT_SPRING_TYPE",
+                        "value": "coil springs"
+                    },
+                    "REAR_STABILIZER_BAR": {
+                        "id": 391,
+                        "name": "REAR_STABILIZER_BAR",
+                        "value": "stabilizer bar"
+                    },
+                    "FRONT_SUSPENSION_TYPE": {
+                        "id": 386,
+                        "name": "FRONT_SUSPENSION_TYPE",
+                        "value": "double wishbone"
+                    }
+                }
+            },
+            "PRICING": {
+                "id": 3,
+                "name": "PRICING",
+                "attributes": {
+                    "MSRP": {
+                        "id": 38,
+                        "name": "MSRP",
+                        "value": "387000"
+                    },
+                    "NEW_TMV_OFFER_PRICE_DISCOUNT": {
+                        "id": 638,
+                        "name": "NEW_TMV_OFFER_PRICE_DISCOUNT",
+                        "value": "0"
+                    },
+                    "GAS_GUZZLER_TAX": {
+                        "id": 39,
+                        "name": "GAS_GUZZLER_TAX",
+                        "value": "3700"
+                    },
+                    "DELIVERY_CHARGE": {
+                        "id": 40,
+                        "name": "DELIVERY_CHARGE",
+                        "value": "2995"
+                    },
+                    "NEW_TMV": {
+                        "id": 42,
+                        "name": "NEW_TMV",
+                        "value": "387000"
+                    }
+                }
+            },
+            "1ST_ROW_SEATS": {
+                "id": 4,
+                "name": "1ST_ROW_SEATS",
+                "attributes": {
+                    "1ST_ROW_SEAT_TYPE": {
+                        "id": 43,
+                        "name": "1ST_ROW_SEAT_TYPE",
+                        "value": "sport"
+                    },
+                    "1ST_ROW_UPHOLSTERY": {
+                        "id": 46,
+                        "name": "1ST_ROW_UPHOLSTERY",
+                        "value": "premium leather"
+                    },
+                    "NUMBER_OF_1ST_ROW_HEADRESTS": {
+                        "id": 44,
+                        "name": "NUMBER_OF_1ST_ROW_HEADRESTS",
+                        "value": "2"
+                    }
+                }
+            },
+            "TRACTION/STABILITY_CONTROL": {
+                "id": 45,
+                "name": "TRACTION/STABILITY_CONTROL",
+                "attributes": {
+                    "STABILITY_CONTROL": {
+                        "id": 394,
+                        "name": "STABILITY_CONTROL",
+                        "value": "stability control"
+                    },
+                    "TRACTION_CONTROL": {
+                        "id": 395,
+                        "name": "TRACTION_CONTROL",
+                        "value": "traction control"
+                    }
+                }
+            },
+            "NCI_STANDARD_FACET": {
+                "id": -100,
+                "name": "NCI_STANDARD_FACET",
+                "attributes": {
+                    "AUTOMATIC_CLIMATE_CONTROL": {
+                        "id": 0,
+                        "name": "AUTOMATIC_CLIMATE_CONTROL",
+                        "value": "200442000"
+                    },
+                    "SIDE_AIRBAGS:_DUAL_FRONT_WITH_HEAD_PROTECTION_CHAMBERS": {
+                        "id": 0,
+                        "name": "SIDE_AIRBAGS:_DUAL_FRONT_WITH_HEAD_PROTECTION_CHAMBERS",
+                        "value": "200442000"
+                    },
+                    "PASSENGER_SEAT:_MULTI_LEVEL_HEATING": {
+                        "id": 0,
+                        "name": "PASSENGER_SEAT:_MULTI_LEVEL_HEATING",
+                        "value": "200442000"
+                    },
+                    "TIRE_PRESSURE_MONITORING": {
+                        "id": 0,
+                        "name": "TIRE_PRESSURE_MONITORING",
+                        "value": "200442000"
+                    },
+                    "NAVIGATION_SYSTEM:_HARD_DRIVE_BASED_DISPLAY_W/VOICE_ACTIVATION_AND_DIRECTIONS": {
+                        "id": 0,
+                        "name": "NAVIGATION_SYSTEM:_HARD_DRIVE_BASED_DISPLAY_W/VOICE_ACTIVATION_AND_DIRECTIONS",
+                        "value": "200442000"
+                    },
+                    "FRONT_AND_REAR_PARKING_SENSORS": {
+                        "id": 0,
+                        "name": "FRONT_AND_REAR_PARKING_SENSORS",
+                        "value": "200442000"
+                    },
+                    "REMOTE_ANTI_THEFT_ALARM_SYSTEM": {
+                        "id": 0,
+                        "name": "REMOTE_ANTI_THEFT_ALARM_SYSTEM",
+                        "value": "200442000"
+                    },
+                    "IN_DASH_CD:_SINGLE_CD_PLAYER": {
+                        "id": 0,
+                        "name": "IN_DASH_CD:_SINGLE_CD_PLAYER",
+                        "value": "200442091"
+                    },
+                    "KEYLESS_IGNITION": {
+                        "id": 0,
+                        "name": "KEYLESS_IGNITION",
+                        "value": "200442000"
+                    },
+                    "SEAT_MATERIAL:_PREMIUM_LEATHER": {
+                        "id": 0,
+                        "name": "SEAT_MATERIAL:_PREMIUM_LEATHER",
+                        "value": "200442000"
+                    },
+                    "PRE_WIRED_FOR_PHONE": {
+                        "id": 0,
+                        "name": "PRE_WIRED_FOR_PHONE",
+                        "value": "200442000"
+                    },
+                    "USB_CONNECTION": {
+                        "id": 0,
+                        "name": "USB_CONNECTION",
+                        "value": "200442091"
+                    },
+                    "1ST_ROW_SEATS:_SPORT": {
+                        "id": 0,
+                        "name": "1ST_ROW_SEATS:_SPORT",
+                        "value": "200442000"
+                    },
+                    "STABILITY_CONTROL": {
+                        "id": 0,
+                        "name": "STABILITY_CONTROL",
+                        "value": "200442000"
+                    },
+                    "DRIVER'S_SEAT:_MULTI_LEVEL_HEATING": {
+                        "id": 0,
+                        "name": "DRIVER'S_SEAT:_MULTI_LEVEL_HEATING",
+                        "value": "200442000"
+                    },
+                    "TRACTION_CONTROL": {
+                        "id": 0,
+                        "name": "TRACTION_CONTROL",
+                        "value": "200442000"
+                    },
+                    "IPOD/IPHONE_INTEGRATION": {
+                        "id": 0,
+                        "name": "IPOD/IPHONE_INTEGRATION",
+                        "value": "200442091"
+                    }
+                }
+            },
+            "STYLE_INFO": {
+                "id": 52,
+                "name": "STYLE_INFO",
+                "attributes": {
+                    "MANUFACTURER_BODY_TYPE": {
+                        "id": 443,
+                        "name": "MANUFACTURER_BODY_TYPE",
+                        "value": "Coupe"
+                    },
+                    "EPA_CLASS": {
+                        "id": 444,
+                        "name": "EPA_CLASS",
+                        "value": "Two Seaters"
+                    },
+                    "STYLE_END_DATE": {
+                        "id": 436,
+                        "name": "STYLE_END_DATE",
+                        "value": "09-Sep-2099"
+                    },
+                    "TRIM_LEVEL": {
+                        "id": 28,
+                        "name": "TRIM_LEVEL",
+                        "value": "LP 700-4"
+                    },
+                    "FLEET": {
+                        "id": 22,
+                        "name": "FLEET",
+                        "value": "consumer"
+                    },
+                    "PERFORMANCE": {
+                        "id": 451,
+                        "name": "PERFORMANCE",
+                        "value": "High-Performance"
+                    },
+                    "TMV_CATEGORY": {
+                        "id": 596,
+                        "name": "TMV_CATEGORY",
+                        "value": "Exotic"
+                    },
+                    "VEHICLE_SIZE_CLASS": {
+                        "id": 449,
+                        "name": "VEHICLE_SIZE_CLASS",
+                        "value": "Midsize"
+                    },
+                    "LONG_NAME": {
+                        "id": 0,
+                        "name": "LONG_NAME",
+                        "value": "6.5L V12 AWD 7-speed Automated Manual"
+                    },
+                    "PRIMARY_BODY_TYPE": {
+                        "id": 447,
+                        "name": "PRIMARY_BODY_TYPE",
+                        "value": "Car"
+                    },
+                    "STYLE_START_DATE": {
+                        "id": 435,
+                        "name": "STYLE_START_DATE",
+                        "value": "06-Nov-2012"
+                    },
+                    "WHERE_BUILT": {
+                        "id": 670,
+                        "name": "WHERE_BUILT",
+                        "value": "Italy"
+                    },
+                    "VEHICLE_STYLE": {
+                        "id": 636,
+                        "name": "VEHICLE_STYLE",
+                        "value": "Coupe"
+                    },
+                    "EXOTIC": {
+                        "id": 452,
+                        "name": "EXOTIC",
+                        "value": "Exotic"
+                    },
+                    "STANDARD_VEHICLE_DESCRIPTION": {
+                        "id": 441,
+                        "name": "STANDARD_VEHICLE_DESCRIPTION",
+                        "value": "LP 700-4 2dr Coupe AWD (6.5L 12cyl 7AM)"
+                    },
+                    "ESTIMATE_TMV": {
+                        "id": 597,
+                        "name": "ESTIMATE_TMV",
+                        "value": "N"
+                    },
+                    "STYLE_LINK_CODE": {
+                        "id": 442,
+                        "name": "STYLE_LINK_CODE",
+                        "value": "T120189"
+                    }
+                }
+            },
+            "STEERING": {
+                "id": 40,
+                "name": "STEERING",
+                "attributes": {
+                    "POWER_STEERING": {
+                        "id": 348,
+                        "name": "POWER_STEERING",
+                        "value": "power steering"
+                    }
+                }
+            },
+            "DRIVE_TYPE": {
+                "id": 19,
+                "name": "DRIVE_TYPE",
+                "attributes": {
+                    "DRIVEN_WHEELS": {
+                        "id": 157,
+                        "name": "DRIVEN_WHEELS",
+                        "value": "all wheel drive"
+                    }
+                }
+            },
+            "STORAGE": {
+                "id": 42,
+                "name": "STORAGE",
+                "attributes": {
+                    "DOOR_POCKETS_LOCATION": {
+                        "id": 364,
+                        "name": "DOOR_POCKETS_LOCATION",
+                        "value": "front"
+                    }
+                }
+            },
+            "DOORS": {
+                "id": 18,
+                "name": "DOORS",
+                "attributes": {
+                    "NUMBER_OF_DOORS": {
+                        "id": 465,
+                        "name": "NUMBER_OF_DOORS",
+                        "value": "2"
+                    }
+                }
+            },
+            "EXTERIOR_DIMENSIONS": {
+                "id": 22,
+                "name": "EXTERIOR_DIMENSIONS",
+                "attributes": {
+                    "OVERALL_WIDTH_WITHOUT_MIRRORS": {
+                        "id": 189,
+                        "name": "OVERALL_WIDTH_WITHOUT_MIRRORS",
+                        "value": "79.9"
+                    },
+                    "OVERALL_LENGTH": {
+                        "id": 188,
+                        "name": "OVERALL_LENGTH",
+                        "value": "188.2"
+                    },
+                    "WHEELBASE": {
+                        "id": 192,
+                        "name": "WHEELBASE",
+                        "value": "106.3"
+                    },
+                    "OVERALL_HEIGHT": {
+                        "id": 187,
+                        "name": "OVERALL_HEIGHT",
+                        "value": "44.7"
+                    },
+                    "OVERALL_WIDTH_WITH_MIRRORS": {
+                        "id": 190,
+                        "name": "OVERALL_WIDTH_WITH_MIRRORS",
+                        "value": "89.2"
+                    },
+                    "REAR_TRACK": {
+                        "id": 191,
+                        "name": "REAR_TRACK",
+                        "value": "66.9"
+                    },
+                    "FRONT_TRACK": {
+                        "id": 184,
+                        "name": "FRONT_TRACK",
+                        "value": "67.7"
+                    }
+                }
+            },
+            "FRONT_PASSENGER_SEAT": {
+                "id": 24,
+                "name": "FRONT_PASSENGER_SEAT",
+                "attributes": {
+                    "HEATED_PASSENGER_SEAT": {
+                        "id": 209,
+                        "name": "HEATED_PASSENGER_SEAT",
+                        "value": "multi-level heating"
+                    },
+                    "NUMBER_OF_PASSENGER_SEAT_POWER_ADJUSTMENTS": {
+                        "id": 217,
+                        "name": "NUMBER_OF_PASSENGER_SEAT_POWER_ADJUSTMENTS",
+                        "value": "2"
+                    },
+                    "ADJUSTABLE_PASSENGER_SEAT_HEADREST": {
+                        "id": 204,
+                        "name": "ADJUSTABLE_PASSENGER_SEAT_HEADREST",
+                        "value": "integrated headrests"
+                    }
+                }
+            },
+            "ENGINE_FEATURES": {
+                "id": 21,
+                "name": "ENGINE_FEATURES",
+                "attributes": {
+                    "ENGINE_AUTO_STOP/START": {
+                        "id": 180,
+                        "name": "ENGINE_AUTO_STOP/START",
+                        "value": "engine auto stop/start"
+                    },
+                    "KEYLESS_IGNITION": {
+                        "id": 181,
+                        "name": "KEYLESS_IGNITION",
+                        "value": "keyless ignition"
+                    }
+                }
+            },
+            "AIRBAGS": {
+                "id": 10,
+                "name": "AIRBAGS",
+                "attributes": {
+                    "PASSENGER_AIRBAG_DEACTIVATION": {
+                        "id": 95,
+                        "name": "PASSENGER_AIRBAG_DEACTIVATION",
+                        "value": "occupant sensing deactivation"
+                    },
+                    "SIDE_AIRBAGS": {
+                        "id": 97,
+                        "name": "SIDE_AIRBAGS",
+                        "value": "dual front with head protection chambers"
+                    },
+                    "KNEE_AIRBAGS": {
+                        "id": 93,
+                        "name": "KNEE_AIRBAGS",
+                        "value": "dual front"
+                    },
+                    "PASSENGER_AIRBAG": {
+                        "id": 94,
+                        "name": "PASSENGER_AIRBAG",
+                        "value": "Standard"
+                    },
+                    "DEPOWERED_AIRBAGS": {
+                        "id": 90,
+                        "name": "DEPOWERED_AIRBAGS",
+                        "value": "Standard"
+                    }
+                }
+            },
+            "EXTERIOR_LIGHTS": {
+                "id": 23,
+                "name": "EXTERIOR_LIGHTS",
+                "attributes": {
+                    "DAYTIME_RUNNING_LIGHTS": {
+                        "id": 196,
+                        "name": "DAYTIME_RUNNING_LIGHTS",
+                        "value": "daytime running lights"
+                    },
+                    "XENON_HEADLIGHTS": {
+                        "id": 203,
+                        "name": "XENON_HEADLIGHTS",
+                        "value": "xenon high intensity discharge"
+                    },
+                    "HEADLIGHTS_DUSK_SENSOR": {
+                        "id": 200,
+                        "name": "HEADLIGHTS_DUSK_SENSOR",
+                        "value": "dusk sensing"
+                    }
+                }
+            },
+            "SEATING_CONFIGURATION": {
+                "id": 36,
+                "name": "SEATING_CONFIGURATION",
+                "attributes": {
+                    "1ST_ROW_SEATING_CAPACITY": {
+                        "id": 320,
+                        "name": "1ST_ROW_SEATING_CAPACITY",
+                        "value": "2"
+                    }
+                }
+            },
+            "SPECIFICATIONS": {
+                "id": 39,
+                "name": "SPECIFICATIONS",
+                "attributes": {
+                    "MANUFACTURER_0_100KM_ACCELERATION_TIME_(SECONDS)": {
+                        "id": 342,
+                        "name": "MANUFACTURER_0_100KM_ACCELERATION_TIME_(SECONDS)",
+                        "value": "2.9"
+                    },
+                    "EPA_COMBINED_MPG": {
+                        "id": 459,
+                        "name": "EPA_COMBINED_MPG",
+                        "value": "13"
+                    },
+                    "EGE_HIGHWAY_MPG": {
+                        "id": 0,
+                        "name": "EGE_HIGHWAY_MPG",
+                        "value": "18"
+                    },
+                    "EPA_CITY_MPG": {
+                        "id": 461,
+                        "name": "EPA_CITY_MPG",
+                        "value": "11"
+                    },
+                    "CURB_WEIGHT": {
+                        "id": 338,
+                        "name": "CURB_WEIGHT",
+                        "value": "3472"
+                    },
+                    "TURNING_DIAMETER": {
+                        "id": 346,
+                        "name": "TURNING_DIAMETER",
+                        "value": "41.0"
+                    },
+                    "FUEL_CAPACITY": {
+                        "id": 340,
+                        "name": "FUEL_CAPACITY",
+                        "value": "23.8"
+                    },
+                    "EPA_HIGHWAY_MPG": {
+                        "id": 460,
+                        "name": "EPA_HIGHWAY_MPG",
+                        "value": "18"
+                    },
+                    "EGE_COMBINED_MPG": {
+                        "id": 0,
+                        "name": "EGE_COMBINED_MPG",
+                        "value": "13"
+                    },
+                    "EGE_CITY_MPG": {
+                        "id": 0,
+                        "name": "EGE_CITY_MPG",
+                        "value": "11"
+                    }
+                }
+            },
+            "DRIVER_SEAT": {
+                "id": 20,
+                "name": "DRIVER_SEAT",
+                "attributes": {
+                    "NUMBER_OF_DRIVER_SEAT_POWER_ADJUSTMENTS": {
+                        "id": 174,
+                        "name": "NUMBER_OF_DRIVER_SEAT_POWER_ADJUSTMENTS",
+                        "value": "2"
+                    },
+                    "ADJUSTABLE_DRIVER_SEAT_HEADREST": {
+                        "id": 162,
+                        "name": "ADJUSTABLE_DRIVER_SEAT_HEADREST",
+                        "value": "integrated headrests"
+                    },
+                    "HEATED_DRIVER_SEAT": {
+                        "id": 169,
+                        "name": "HEATED_DRIVER_SEAT",
+                        "value": "multi-level heating"
+                    }
+                }
+            },
+            "WINDOWS": {
+                "id": 51,
+                "name": "WINDOWS",
+                "attributes": {
+                    "RAIN_SENSING_FRONT_WIPERS": {
+                        "id": 420,
+                        "name": "RAIN_SENSING_FRONT_WIPERS",
+                        "value": "rain sensing"
+                    },
+                    "POWER_WINDOWS": {
+                        "id": 427,
+                        "name": "POWER_WINDOWS",
+                        "value": "power windows"
+                    },
+                    "INTERMITTENT_FRONT_WIPERS": {
+                        "id": 419,
+                        "name": "INTERMITTENT_FRONT_WIPERS",
+                        "value": "variable intermittent"
+                    }
+                }
+            },
+            "PARKING_AID": {
+                "id": 33,
+                "name": "PARKING_AID",
+                "attributes": {
+                    "PARKING_SENSORS": {
+                        "id": 310,
+                        "name": "PARKING_SENSORS",
+                        "value": "front and rear parking sensors"
+                    }
+                }
+            },
+            "NCI_OPTIONAL_FACET": {
+                "id": -101,
+                "name": "NCI_OPTIONAL_FACET",
+                "attributes": {
+                    "PASSENGER_SEAT:_MULTI_LEVEL_HEATING": {
+                        "id": 0,
+                        "name": "PASSENGER_SEAT:_MULTI_LEVEL_HEATING",
+                        "value": "200442064"
+                    },
+                    "SEAT_MATERIAL:_LEATHER/ALCANTARA": {
+                        "id": 0,
+                        "name": "SEAT_MATERIAL:_LEATHER/ALCANTARA",
+                        "value": "200442070"
+                    },
+                    "FRONT_AND_REAR_PARKING_SENSORS": {
+                        "id": 0,
+                        "name": "FRONT_AND_REAR_PARKING_SENSORS",
+                        "value": "200442062"
+                    },
+                    "SEAT_MATERIAL:_LEATHER": {
+                        "id": 0,
+                        "name": "SEAT_MATERIAL:_LEATHER",
+                        "value": "200442068,200442072,200442071,200442069"
+                    },
+                    "DRIVER'S_SEAT:_MULTI_LEVEL_HEATING": {
+                        "id": 0,
+                        "name": "DRIVER'S_SEAT:_MULTI_LEVEL_HEATING",
+                        "value": "200442064"
+                    }
+                }
+            },
+            "TMVU_FEATURE": {
+                "id": 200,
+                "name": "TMVU_FEATURE",
+                "attributes": {
+                    "TMVU_FEATURE_DESCRIPTION_3510000003": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3510000003",
+                        "value": "Intermittent Windshield Wipers"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_2610000051": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_2610000051",
+                        "value": "2-Way Power Front Passenger Seat"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1010000528": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1010000528",
+                        "value": "Premium Unleaded Fuel Required"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1310000023": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1310000023",
+                        "value": "Rear Stabilizer Bar"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_2610000017": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_2610000017",
+                        "value": "Front Headrests"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1310000022": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1310000022",
+                        "value": "Front Stabilizer Bar"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3710000003": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3710000003",
+                        "value": "Automatic On/Off Headlights"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3210000013": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3210000013",
+                        "value": "Front and Rear Parking Sensors"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_4610000034": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_4610000034",
+                        "value": "Automatic Engine Stop/Start"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3710000005": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3710000005",
+                        "value": "Daytime Running Lights"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3310000024": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3310000024",
+                        "value": "Carpeted Floor Mats"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3310000025": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3310000025",
+                        "value": "Front Floor Mats"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3310000062": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3310000062",
+                        "value": "Carbon and Leather Door Trim"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_4210000000": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_4210000000",
+                        "value": "Bluetooth"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3610000001": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3610000001",
+                        "value": "Remote Power Door Locks"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_2610000003": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_2610000003",
+                        "value": "Heated Passenger Seat"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_2610000004": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_2610000004",
+                        "value": "Heated Driver's Seat"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1310000014": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1310000014",
+                        "value": "Double Wishbone Rear Suspension"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3810000008": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3810000008",
+                        "value": "Power Exterior Mirrors"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3210000022": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3210000022",
+                        "value": "Steering Wheel Phone Controls"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3810000007": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3810000007",
+                        "value": "Power Folding Exterior Mirrors"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3210000026": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3210000026",
+                        "value": "Power Steering"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1910000001": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1910000001",
+                        "value": "Electronic Brakeforce Distribution"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3810000002": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3810000002",
+                        "value": "Heated Exterior Mirrors"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_2110000007": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_2110000007",
+                        "value": "Knee Airbags"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3410000002": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3410000002",
+                        "value": "Automatic Climate Control"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_4210000011": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_4210000011",
+                        "value": "Voice Activated Navigation System"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1030000007": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1030000007",
+                        "value": "Variable Valve Timing"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_2110000005": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_2110000005",
+                        "value": "Front Side Airbags"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_2110000000": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_2110000000",
+                        "value": "Driver and Passenger Front Airbags"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_4610000154": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_4610000154",
+                        "value": "Performance-Modified Engine Control Unit w/Multiple Settings"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1210000008": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1210000008",
+                        "value": "Limited Slip Center Differential"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3210000039": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3210000039",
+                        "value": "Steering Wheel Transmission Controls"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3210000037": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3210000037",
+                        "value": "Tilt and Telescopic Steering Wheel"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3310000070": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3310000070",
+                        "value": "Carbon and Leather Center Console Trim"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_4610000117": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_4610000117",
+                        "value": "iPod/iPhone Integration"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3810000012": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3810000012",
+                        "value": "Vanity Mirror(s)"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1210000000": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1210000000",
+                        "value": "All Wheel Drive"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_4610000053": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_4610000053",
+                        "value": "Carbon FIber, Leather and Suede Steering Wheel Trim"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_2610000031": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_2610000031",
+                        "value": "2-Way Power Driver's Seat"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1910000007": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1910000007",
+                        "value": "Ceramic Disc Brakes"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1210000002": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1210000002",
+                        "value": "Center Differential"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1010001773": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1010001773",
+                        "value": "6.5L V12 DOHC 48V FI Engine w/VVT"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_4010000003": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_4010000003",
+                        "value": "AM/FM/CD Audio System"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1310000004": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1310000004",
+                        "value": "Double Wishbone Front Suspension"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1020000103": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1020000103",
+                        "value": "7-Speed Auto-Manual Transmission"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1310000000": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1310000000",
+                        "value": "Active Suspension"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3210000031": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3210000031",
+                        "value": "Rear View Camera"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1210000010": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1210000010",
+                        "value": "Limited Slip Rear Differential"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_2510000028": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_2510000028",
+                        "value": "Premium Leather Seating"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3310000040": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3310000040",
+                        "value": "Reading Lights"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_2410000001": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_2410000001",
+                        "value": "Engine Immobilizer"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3710000011": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3710000011",
+                        "value": "Xenon High Intensity Discharge Headlights"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_2410000000": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_2410000000",
+                        "value": "Anti-Theft Alarm System"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1610000011": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1610000011",
+                        "value": "Tire Pressure Monitoring System"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3310000035": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3310000035",
+                        "value": "Leather Dash Trim"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3510000011": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3510000011",
+                        "value": "Power Windows"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3210000009": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3210000009",
+                        "value": "Door Pockets"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3510000013": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3510000013",
+                        "value": "Rain Sensing Windshield Wipers"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_3210000003": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_3210000003",
+                        "value": "Steering Wheel Audio Controls"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1110000000": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1110000000",
+                        "value": "Hill Holder"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1501000079": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1501000079",
+                        "value": "20 Inch Painted Alloy Wheels"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_2510000030": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_2510000030",
+                        "value": "Front Sport Seats"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_4410000001": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_4410000001",
+                        "value": "Rear Spoiler"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_2010000000": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_2010000000",
+                        "value": "4-Wheel ABS"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1410000001": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1410000001",
+                        "value": "Compass"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1410000000": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1410000000",
+                        "value": "Clock"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1810000002": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1810000002",
+                        "value": "Traction Control"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1410000005": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1410000005",
+                        "value": "Low Fuel Level Indicator"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1810000001": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1810000001",
+                        "value": "Stability Control"
+                    },
+                    "TMVU_FEATURE_DESCRIPTION_1410000007": {
+                        "id": 0,
+                        "name": "TMVU_FEATURE_DESCRIPTION_1410000007",
+                        "value": "Tachometer"
+                    }
+                }
+            },
+            "TRANSMISSION_FEATURES": {
+                "id": 47,
+                "name": "TRANSMISSION_FEATURES",
+                "attributes": {
+                    "SHIFT_CONTROL_MECHANISM": {
+                        "id": 402,
+                        "name": "SHIFT_CONTROL_MECHANISM",
+                        "value": "paddles"
+                    },
+                    "TRANSMISSION_SHIFT_CONTROLS_LOCATION": {
+                        "id": 404,
+                        "name": "TRANSMISSION_SHIFT_CONTROLS_LOCATION",
+                        "value": "steering wheel"
+                    },
+                    "BRAKE_HILL_HOLDER": {
+                        "id": 400,
+                        "name": "BRAKE_HILL_HOLDER",
+                        "value": "brake hill holder"
+                    }
+                }
+            },
+            "MISC._EXTERIOR_FEATURES": {
+                "id": 29,
+                "name": "MISC._EXTERIOR_FEATURES",
+                "attributes": {
+                    "REAR_SPOILER": {
+                        "id": 276,
+                        "name": "REAR_SPOILER",
+                        "value": "rear spoiler"
+                    },
+                    "EXTERIOR_CAMERA": {
+                        "id": 274,
+                        "name": "EXTERIOR_CAMERA",
+                        "value": "rear view camera"
+                    }
+                }
+            },
+            "SECURITY": {
+                "id": 37,
+                "name": "SECURITY",
+                "attributes": {
+                    "ENGINE_IMMOBILIZER": {
+                        "id": 327,
+                        "name": "ENGINE_IMMOBILIZER",
+                        "value": "engine immobilizer"
+                    },
+                    "POWER_DOOR_LOCKS": {
+                        "id": 328,
+                        "name": "POWER_DOOR_LOCKS",
+                        "value": "remote power door locks"
+                    },
+                    "2_STAGE_UNLOCKING": {
+                        "id": 325,
+                        "name": "2_STAGE_UNLOCKING",
+                        "value": "remote 2-stage unlocking"
+                    },
+                    "ANTI_THEFT_ALARM_SYSTEM": {
+                        "id": 326,
+                        "name": "ANTI_THEFT_ALARM_SYSTEM",
+                        "value": "remote anti-theft alarm system"
+                    }
+                }
+            },
+            "DIFFERENTIAL": {
+                "id": 17,
+                "name": "DIFFERENTIAL",
+                "attributes": {
+                    "LIMITED_SLIP_REAR_DIFFERENTIAL": {
+                        "id": 148,
+                        "name": "LIMITED_SLIP_REAR_DIFFERENTIAL",
+                        "value": "limited slip rear differential"
+                    },
+                    "CENTER_DIFFERENTIAL": {
+                        "id": 145,
+                        "name": "CENTER_DIFFERENTIAL",
+                        "value": "viscous"
+                    },
+                    "LIMITED_SLIP_CENTER_DIFFERENTIAL": {
+                        "id": 146,
+                        "name": "LIMITED_SLIP_CENTER_DIFFERENTIAL",
+                        "value": "limited slip center differential"
+                    }
+                }
+            },
+            "MISC._INTERIOR_FEATURES": {
+                "id": 30,
+                "name": "MISC._INTERIOR_FEATURES",
+                "attributes": {
+                    "1ST_ROW_FLOOR_MATS": {
+                        "id": 293,
+                        "name": "1ST_ROW_FLOOR_MATS",
+                        "value": "front floor mats"
+                    },
+                    "READING_LIGHTS": {
+                        "id": 294,
+                        "name": "READING_LIGHTS",
+                        "value": "front reading lights"
+                    },
+                    "FLOOR_MAT_MATERIAL": {
+                        "id": 291,
+                        "name": "FLOOR_MAT_MATERIAL",
+                        "value": "carpet"
+                    }
+                }
+            }
+        },
+        "squishVins": [{
+            "squishVin": "ZHWUC1ZDDL",
+            "engineNames": ["12VNAG6.5"],
+            "squishVinTransmissions": [{
+                "transmissionType": "AT",
+                "numberOfSpeeds": 7
+            }]
+        }],
+        "name": "LP 700-4 2dr Coupe AWD (6.5L 12cyl 7AM)",
+        "niceName": "lp70042drcoupeawd65l12cyl7am",
+        "publicationState": "NEW",
+        "makeShare": null
+    }]
+}
