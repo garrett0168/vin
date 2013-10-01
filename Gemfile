@@ -43,3 +43,20 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+group :development, :test do
+  gem 'cucumber-rails', :require => false
+  gem "rspec-rails"
+  gem 'database_cleaner'
+  gem 'poltergeist'
+  gem 'factory_girl_rails'
+  gem 'ci_reporter'
+  gem 'capybara-screenshot'
+end
+
+gem 'quiet_assets', :group => :development
+
+group :test do
+  gem 'shoulda'
+  gem 'anticipate'
+end
