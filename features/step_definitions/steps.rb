@@ -18,3 +18,22 @@ end
 Then /^(?:I )?(?:click|click on) "([^"]*)"\s*$/ do |the_link|
   click_link_or_button(the_link)
 end
+
+Given /^the following vehicles:$/ do |vehicles|
+  vehicles.hashes.each do |vehicle| 
+    FactoryGirl.create(:vehicle, vehicle)
+  end
+end
+
+Then(/^I should see the following vehicles:$/) do |table|
+  rows = find("#vin-history-table").all('tr')
+  actual_table = rows.map { |r| r.all('th,td').map { |c| c.text.strip } }
+  
+  actual_table = Cucumber::Ast::Table.new actual_table
+  table.diff!(actual_table, :surplus_row => true, :surplus_col => true)
+end
+
+When(/^I click "Details" for VIN "(.*?)"$/) do |vin|
+  within("#vin_#{vin}") { click_link_or_button("Details") }
+end
+

@@ -4,7 +4,7 @@ Vin::Application.routes.draw do
 
   resources :vehicles, :only => [:index] do
     collection do
-      get 'by_vin/:vin' => 'vehicles#by_vin'
+      get 'by_vin/:vin' => 'vehicles#by_vin', :as => "by_vin"
     end
   end
 
