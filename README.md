@@ -11,6 +11,7 @@ Prerequisites
 For testing:
 
 * [PhantomJS (1.9.0 or above)](http://phantomjs.org/download.html) Extract and put bin/phantomjs in your path.
+* [Karma](karma-runner.github.io)
 
 Setup
 =====
@@ -32,7 +33,7 @@ Cucumber tests:
 
 Javascript tests:
 
-`Coming soon`
+`karma start spec/karma/config/dev.js`
 
 Starting the server
 ===================
