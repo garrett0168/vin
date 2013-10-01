@@ -2,6 +2,12 @@ Vin::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  resources :vehicles, :only => [:index] do
+    collection do
+      get 'by_vin/:vin' => 'vehicles#by_vin'
+    end
+  end
+
   # You can have the root of your site routed with "root"
   root 'home#index'
 
