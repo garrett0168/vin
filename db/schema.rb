@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131001160828) do
+ActiveRecord::Schema.define(version: 20131001180528) do
 
   create_table "vehicles", force: true do |t|
     t.string  "vin",               null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20131001160828) do
     t.string  "transmission_type"
     t.string  "engine_type"
     t.integer "engine_cylinders"
-    t.integer "engine_size"
+    t.float   "engine_size"
     t.string  "trim"
   end
 
