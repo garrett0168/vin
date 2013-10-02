@@ -1,6 +1,6 @@
 'use strict';
 
-var vinApp = angular.module('vinApp', ['ngResource'])
+var vinApp = angular.module('vinApp', ['ngResource', 'ui.bootstrap'])
     .config(['$routeProvider', function($routeProvider, $locationProvider) {
         $routeProvider
             .when('/',     {controller: 'VehicleSearchController',    templateUrl: '<%= asset_path("index.html")%>'})

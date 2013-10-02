@@ -5,6 +5,7 @@ Vin::Application.routes.draw do
   resources :vehicles, :only => [:index] do
     collection do
       get 'by_vin/:vin' => 'vehicles#by_vin', :as => "by_vin"
+      get 'typeahead_vin/:vin' => 'vehicles#typeahead_vin'
     end
   end
 

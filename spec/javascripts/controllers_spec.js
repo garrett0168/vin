@@ -47,13 +47,36 @@ describe('VIN decoder controllers', function() {
       expect($scope.vin).toEqual('');
     });
 
-    it('decode a VIN', function() {
+    it('can decode a VIN', function() {
       var ctrl = $controller('VehicleSearchController', {$scope: $scope});
       $scope.vin = "12345";
 
       $scope.submitVin();
 
       expect($location.path()).toBe('/vehicles/by_vin/12345');
+    });
+
+    it('can handle typeahead and cache the responses', function() {
+      var ctrl = $controller('VehicleSearchController', {$scope: $scope});
+      $httpBackend.expect('GET', '/vehicles/typeahead_vin/Z').respond(["ZHWUC1ZD5DLA01714", "ZQWUC1ZD5DLA01714"]);
+      $scope.vinTypeahead("Z");
+      $httpBackend.flush();
+
+      expect($scope.typeahead_cache["Z"]).toEqual(["ZHWUC1ZD5DLA01714", "ZQWUC1ZD5DLA01714"]);
+
+      var typeahead = $scope.vinTypeahead("Z");
+      $httpBackend.verifyNoOutstandingRequest();
+      expect(typeahead).toEqual(["ZHWUC1ZD5DLA01714", "ZQWUC1ZD5DLA01714"]);
+
+      $httpBackend.expect('GET', '/vehicles/typeahead_vin/ZH').respond(["ZHWUC1ZD5DLA01714"]);
+      $scope.vinTypeahead("ZH");
+      $httpBackend.flush();
+
+      expect($scope.typeahead_cache["ZH"]).toEqual(["ZHWUC1ZD5DLA01714"]);
+
+      typeahead = $scope.vinTypeahead("ZH");
+      $httpBackend.verifyNoOutstandingRequest();
+      expect(typeahead).toEqual(["ZHWUC1ZD5DLA01714"]);
     });
   });
 

@@ -27,4 +27,12 @@ class VehiclesController < ApplicationController
     
   end
 
+  def typeahead_vin
+    vin = params[:vin]
+    vehicles = Vehicle.where("vin LIKE :prefix", prefix: "#{vin}%").collect { |v| v.vin }
+    respond_to do |format|
+      format.json { render json: vehicles }
+    end
+  end
+
 end
