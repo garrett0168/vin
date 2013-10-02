@@ -17,7 +17,7 @@ module.exports = function(config) {
       'app/assets/javascripts/angular.js',
       'app/assets/javascripts/angular-resource.js',
       'spec/karma/deps/angular-mocks.js',
-      'app/assets/javascripts/vin-app.js',
+      'app/assets/javascripts/vin-app.js.erb',
       'app/assets/javascripts/factories.js',
       'app/assets/javascripts/controllers.js',
 
