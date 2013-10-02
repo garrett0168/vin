@@ -12,14 +12,16 @@ Background:
     | 2345678901 | Toyota | Camry | 2013 | XLE  | AUTOMATIC         | gas         | 6                | 2.5         |
 
 Scenario: As a user, I can view all VINs in the database
-    When I visit "/vehicles"
+    When I visit the home page
+    And I click "View Decoded VINs"
     Then I should see the following vehicles:
     | VIN        |         |
     | 1234567890 | Details |
     | 2345678901 | Details |
 
 Scenario: As a user, I can view the details of a VIN
-    When I visit "/vehicles"
+    When I visit the home page
+    And I click "View Decoded VINs"
     And I click "Details" for VIN "1234567890"
     Then I should see "1234567890"
     And I should see "Ford"

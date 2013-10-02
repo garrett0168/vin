@@ -6,7 +6,7 @@ Feature:  Decode VIN
     I need to submit a VIN
 
 Scenario: As a user, I can decode a VIN
-    When I visit "/"
+    When I visit the home page
     And I fill in "vin-input" with "ZHWUC1ZD5DLA01714"
     When I click "Decode"
     Then I should see "ZHWUC1ZD5DLA01714"

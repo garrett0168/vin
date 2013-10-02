@@ -1,0 +1,2 @@
+require 'anticipate'
+World(Anticipate)

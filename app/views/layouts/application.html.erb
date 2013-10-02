@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="vinApp">
 <head>
   <title>VIN App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,25 +12,12 @@
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <a href="/" class="navbar-brand">VIN APP</a>
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="navbar-collapse collapse" id="navbar-main">
-        <ul class="nav navbar-nav">
-          <li>
-            <a href="#">About</a>
-          </li>
-        </ul>
+        <a href="/" class="navbar-brand">VIN Decoder</a>
       </div>
     </div>
   </div>
 
-  <div id="main-content" class="container">
-    <%= yield %>
+  <div id="main-content" ng-view>
   </div>
 
   <footer style="margin-top:50px;">

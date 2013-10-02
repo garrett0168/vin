@@ -14,8 +14,14 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'spec/javascripts/*.js',
-      'app/assets/javascripts'
+      'app/assets/javascripts/angular.js',
+      'app/assets/javascripts/angular-resource.js',
+      'spec/karma/deps/angular-mocks.js',
+      'app/assets/javascripts/vin-app.js',
+      'app/assets/javascripts/factories.js',
+      'app/assets/javascripts/controllers.js',
+
+      'spec/javascripts/*.js'
     ],
 
 

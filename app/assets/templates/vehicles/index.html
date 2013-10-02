@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Decoded VINs</h2>
+    </div>
+
+    <div class="col-md-12">
+      <table class="table table-striped table-hover" id="vin-history-table">
+        <thead>
+          <tr>
+            <th>
+            VIN
+            </th>
+            <th>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="vehicle in vehicles" id="vin_{{vehicle.vin}}">
+            <td>{{vehicle.vin}}</td>
+            <td><a href="/#vehicles/by_vin/{{vehicle.vin}}" class="btn btn-primary">Details</a></td>
+          </tr>
+          <tr ng-show="vehicles.empty">
+            <td>No VINs decoded yet</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -3,6 +3,11 @@ When /^I visit "(.*)\s*"$/ do |uri|
   sleep 0.5
 end
 
+When(/^I visit the home page$/) do
+  visit "/"
+  sleep 0.5
+end
+
 Then /^I should( not)? see "([^"]*)"\s*$/ do |negative, text|
   if negative then
     page.should_not have_xpath(".//*[contains(text(),\"#{text}\")]", :visible => true)
@@ -26,11 +31,13 @@ Given /^the following vehicles:$/ do |vehicles|
 end
 
 Then(/^I should see the following vehicles:$/) do |table|
-  rows = find("#vin-history-table").all('tr')
-  actual_table = rows.map { |r| r.all('th,td').map { |c| c.text.strip } }
-  
-  actual_table = Cucumber::Ast::Table.new actual_table
-  table.diff!(actual_table, :surplus_row => true, :surplus_col => true)
+  sleeping(2).seconds.between_tries.failing_after(5).tries do
+    rows = find("#vin-history-table").all('tr')
+    actual_table = rows.map { |r| r.all('th,td').map { |c| c.text.strip } }
+
+    actual_table = Cucumber::Ast::Table.new actual_table
+    table.diff!(actual_table, :surplus_row => true, :surplus_col => true)
+  end
 end
 
 When(/^I click "Details" for VIN "(.*?)"$/) do |vin|
