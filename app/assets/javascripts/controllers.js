@@ -52,3 +52,4 @@ vinApp.controller('VehiclesIndexController', ['$scope', 'Vehicles', function($sc
     $scope.vehiclesFiltered = $scope.vehicles.slice( offset, offset+$scope.vehiclesPerPage );
   };
 }]);
+

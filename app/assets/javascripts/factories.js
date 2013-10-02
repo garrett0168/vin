@@ -7,3 +7,4 @@ vinApp.factory('Vehicles', ['$resource', function($resource) {
 vinApp.factory('Vehicle', ['$resource', function($resource) {
   return $resource('/vehicles/by_vin/:vin');
 }]);
+
