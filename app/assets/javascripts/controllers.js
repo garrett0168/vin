@@ -30,5 +30,25 @@ vinApp.controller('VehicleByVinController', ['$scope', '$routeParams', 'Vehicle'
 }]);
 
 vinApp.controller('VehiclesIndexController', ['$scope', 'Vehicles', function($scope, Vehicles) {
-  $scope.vehicles = Vehicles.query();
+  $scope.totalVehicles = 0;
+  $scope.currentPage = 1;
+  $scope.vehiclesPerPage = 5;
+  $scope.vehicles = Vehicles.query(function() {
+    $scope.totalVehicles = $scope.vehicles.length;
+  });
+  $scope.vehiclesFiltered = [];
+
+  $scope.$watch('currentPage', function() {
+    $scope.filter();
+  });
+
+  $scope.$watch('totalVehicles', function() {
+    $scope.filter();
+  });
+
+  $scope.filter = function()
+  {
+    var offset = ($scope.currentPage - 1) * $scope.vehiclesPerPage;
+    $scope.vehiclesFiltered = $scope.vehicles.slice( offset, offset+$scope.vehiclesPerPage );
+  };
 }]);

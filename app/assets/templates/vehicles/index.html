@@ -16,7 +16,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="vehicle in vehicles" id="vin_{{vehicle.vin}}">
+          <tr ng-repeat="vehicle in vehiclesFiltered" id="vin_{{vehicle.vin}}">
             <td>{{vehicle.vin}}</td>
             <td><a href="/#vehicles/by_vin/{{vehicle.vin}}" class="btn btn-primary">Details</a></td>
           </tr>
@@ -26,6 +26,9 @@
           </tr>
         </tbody>
       </table>
+      <div id="pagination" ng-show="totalVehicles > vehiclesPerPage">
+        <pagination total-items="totalVehicles" page="currentPage" items-per-page="vehiclesPerPage"></pagination>
+      </div>
     </div>
   </div>
 </div>

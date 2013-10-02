@@ -6,3 +6,6 @@ body {
   color: #000;
 }
 
+#pagination {
+  cursor: pointer;
+}

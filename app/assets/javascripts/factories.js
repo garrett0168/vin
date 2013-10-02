@@ -1,9 +1,9 @@
 'use strict';
 
 vinApp.factory('Vehicles', ['$resource', function($resource) {
-    return $resource('/vehicles');
+  return $resource('/vehicles');
 }]);
 
 vinApp.factory('Vehicle', ['$resource', function($resource) {
-    return $resource('/vehicles/by_vin/:vin');
+  return $resource('/vehicles/by_vin/:vin');
 }]);

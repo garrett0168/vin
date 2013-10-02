@@ -38,6 +38,27 @@ describe('VIN decoder controllers', function() {
       $httpBackend.flush();
     
       expect($scope.vehicles).toEqualData([{id:1, vin:'1234567890'}, {id:2, vin:'2345678901'}]);
+      expect($scope.totalVehicles).toEqual(2);
+    });
+
+    it('should handle pagination locally', function() {
+      $httpBackend.expect('GET', '/vehicles').respond([{id:1, vin:'1234567890'}, {id:2, vin:'2345678901'}, 
+        {id:3, vin:'123'}, {id:4, vin:'456'}, {id:5, vin:'789'},
+        {id:6, vin:'101112'}, {id:7, vin:'131415'}, {id:8, vin:'161718'}]);
+    
+      var ctrl = $controller('VehiclesIndexController', {$scope: $scope});
+    
+      // Simulate server response.
+      $httpBackend.flush();
+
+      // First page
+      $scope.filter();
+      expect($scope.vehiclesFiltered).toEqualData([{id:1, vin:'1234567890'}, {id:2, vin:'2345678901'}, {id:3, vin:'123'}, {id:4, vin:'456'}, {id:5, vin:'789'}]);
+
+      // Next page
+      $scope.currentPage = 2;
+      $scope.filter();
+      expect($scope.vehiclesFiltered).toEqualData([{id:6, vin:'101112'}, {id:7, vin:'131415'}, {id:8, vin:'161718'}]);
     });
   });
 
