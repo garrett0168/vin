@@ -1,9 +1,5 @@
 body {
-  padding-top: 65px;
-}
-
-.navbar {
-  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1) inset, 0 1px 10px rgba(0, 0, 0, 0.1);
+  padding-top: 50px;
 }
 
 .black {
