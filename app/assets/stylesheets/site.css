@@ -9,3 +9,7 @@ body {
 #pagination {
   cursor: pointer;
 }
+
+#vin-not-found {
+  margin-top: 20px;
+}
