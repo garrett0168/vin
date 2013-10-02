@@ -3,7 +3,7 @@ class VehiclesController < ApplicationController
   def index
     @vehicles = Vehicle.all
     respond_to do |format|
-      format.json { render json: @vehicles.to_json }
+      format.json { render json: @vehicles.to_json(:only => [:id, :vin, :make, :model]) }
     end
   end
 

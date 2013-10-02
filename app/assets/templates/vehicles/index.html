@@ -12,15 +12,23 @@
             VIN
             </th>
             <th>
+            Make
+            </th>
+            <th>
+            Model
+            </th>
+            <th>
             </th>
           </tr>
         </thead>
         <tbody>
           <tr ng-repeat="vehicle in vehiclesFiltered" id="vin_{{vehicle.vin}}">
             <td>{{vehicle.vin}}</td>
+            <td>{{vehicle.make}}</td>
+            <td>{{vehicle.model}}</td>
             <td><a href="/#vehicles/by_vin/{{vehicle.vin}}" class="btn btn-primary">Details</a></td>
           </tr>
-          <tr ng-show="vehicles.empty">
+          <tr ng-show="vehiclesFiltered.length == 0">
             <td>No VINs decoded yet</td>
             <td></td>
           </tr>
