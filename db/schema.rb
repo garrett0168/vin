@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131001180528) do
+ActiveRecord::Schema.define(version: 20131002204746) do
+
+  create_table "vehicle_images", force: true do |t|
+    t.integer "vehicle_id"
+    t.string  "author_names"
+    t.string  "caption"
+    t.string  "image_type"
+    t.string  "low_res_url"
+    t.string  "medium_res_url"
+    t.string  "high_res_url"
+  end
+
+  add_index "vehicle_images", ["vehicle_id"], name: "index_vehicle_images_on_vehicle_id", using: :btree
 
   create_table "vehicles", force: true do |t|
     t.string  "vin",               null: false
@@ -23,6 +35,7 @@ ActiveRecord::Schema.define(version: 20131001180528) do
     t.integer "engine_cylinders"
     t.float   "engine_size"
     t.string  "trim"
+    t.integer "style_id"
   end
 
   add_index "vehicles", ["vin"], name: "index_vehicles_on_vin", using: :btree

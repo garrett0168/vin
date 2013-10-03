@@ -18,3 +18,4 @@ Scenario: As a user, I can decode a VIN
     And I should see "gas"
     And I should see "12"
     And I should see "6.5"
+    And I should see "Image Gallery"

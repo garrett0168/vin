@@ -22,7 +22,7 @@ class VehiclesController < ApplicationController
     end
 
     respond_to do |format|
-      format.json { render json: @vehicle.to_json, status: @vehicle.nil? ? 404 : 200 }
+      format.json { render json: @vehicle.to_json(:include => :vehicle_images), status: @vehicle.nil? ? 404 : 200 }
     end
     
   end
