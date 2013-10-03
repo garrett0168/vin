@@ -21,6 +21,7 @@ module.exports = function(config) {
       'app/assets/javascripts/vin-app.js.erb',
       'app/assets/javascripts/factories.js',
       'app/assets/javascripts/controllers.js',
+      'app/assets/javascripts/filters.js',
 
       'spec/javascripts/*.js'
     ],

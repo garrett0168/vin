@@ -24,11 +24,11 @@
       </div>
       <div class="col-md-4">
         <h6>Transmission Type</h6>
-        {{ vehicle.transmission_type }}
+        {{ vehicle.transmission_type | humanize }}
       </div>
       <div class="col-md-4">
         <h6>Engine Type</h6>
-        {{ vehicle.engine_type }}
+        {{ vehicle.engine_type | humanize }}
       </div>
       <div class="col-md-4">
         <h6>Engine Cylinders</h6>
