@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131002204746) do
+ActiveRecord::Schema.define(version: 20131003180813) do
 
   create_table "vehicle_images", force: true do |t|
     t.integer "vehicle_id"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20131002204746) do
     t.float   "engine_size"
     t.string  "trim"
     t.integer "style_id"
+    t.string  "name"
   end
 
   add_index "vehicles", ["vin"], name: "index_vehicles_on_vin", using: :btree

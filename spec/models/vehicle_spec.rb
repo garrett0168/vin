@@ -88,6 +88,7 @@ describe Vehicle do
       vehicle.engine_cylinders.should == 12
       vehicle.engine_size.should == 6.5
       vehicle.trim.should == "LP 700-4"
+      vehicle.name.should == "LP 700-4 2dr Coupe AWD (6.5L 12cyl 7AM)"
       vehicle.style_id.should == 200442000
 
       # a vehicle without a trim

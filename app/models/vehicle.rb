@@ -12,7 +12,8 @@ class Vehicle < ActiveRecord::Base
           obj = body["styleHolder"][0]
           properties = {vin: vin, make: obj["makeName"], model: obj["modelName"], year: obj["year"],
             transmission_type: obj["transmissionType"], engine_type: obj["engineType"],
-            engine_cylinders: obj["engineCylinder"], engine_size: obj["engineSize"], style_id: obj["id"]}
+            engine_cylinders: obj["engineCylinder"], engine_size: obj["engineSize"], style_id: obj["id"],
+            name: obj["name"]}
           properties.merge!(trim: obj["trim"]["name"]) if obj["trim"]
 
           vehicle = Vehicle.create!(properties)
