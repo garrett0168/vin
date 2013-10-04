@@ -113,5 +113,18 @@ describe('VIN decoder controllers', function() {
     
       expect($scope.vehicle).toEqualData({id:1, vin:'12345', make:'Lamborghini'});
     });
+
+    it('should compute the image carousel width based on an image url', function() {
+      $httpBackend.expect('GET', '/vehicles/by_vin/12345').respond({id:1, vin:'12345', make:'Lamborghini'});
+      var ctrl = $controller('VehicleByVinController', {$scope: $scope, $routeParams: {vin: '12345'}});
+
+      $httpBackend.flush();
+
+      $scope.calculateCarouselWidth("/lexus/rx-350/2013/oem/2013_lexus_rx-350_4dr-suv_base_d_oem_1_423.jpg");
+      expect($scope.carouselGridWidth).toEqual(6);
+
+      $scope.calculateCarouselWidth("/lamborghini/aventador/2012/oem/2012_lamborghini_aventador_coupe_lp-700-4_detail_oem_2_276.jpg");
+      expect($scope.carouselGridWidth).toEqual(5);
+    });
   });
 });
