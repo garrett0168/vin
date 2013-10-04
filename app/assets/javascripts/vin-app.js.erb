@@ -8,3 +8,5 @@ var vinApp = angular.module('vinApp', ['ngResource', 'ui.bootstrap'])
             .when('/vehicles/by_vin/:vin', {controller: 'VehicleByVinController',     templateUrl: '<%= asset_path("vehicles/by_vin.html")%>'})
             .otherwise({redirectTo: '/'});
     }]);
+
+
