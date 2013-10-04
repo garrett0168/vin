@@ -1,6 +1,13 @@
 <div class="jumbotron">
   <div class="container">
-    <h1>Enter a VIN:</h1>
+    <div class="visible-md visible-lg">
+      <h1>Enter a 
+        <span class="vin-tooltip" tooltip-placement="right" tooltip="Vehicle Identification Number - a unique code used by the automotive industry to identify individual motor vehicles, towed vehicles, motorcycles, scooters and mopeds as defined in ISO 3833.">VIN</span>:
+      </h1>
+    </div>
+    <div class="visible-xs visible-sm">
+      <h1>Enter a VIN:</h1>
+    </div>
     <div>
       <input type="text" id="vin-input" ng-model="vin" typeahead="vin for vin in vinTypeahead($viewValue)" typeahead-on-select="submitVin()">
       <input class="btn btn-primary" type="submit" id="vin-submit" value="Decode" ng-click="submitVin()">

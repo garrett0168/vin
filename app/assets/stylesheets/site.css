@@ -60,7 +60,7 @@ body {
 }
 
 .extra-top-margin {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .jumbotron input {
@@ -69,4 +69,9 @@ body {
 
 .typeahead a {
   cursor: pointer;
+}
+
+.vin-tooltip {
+  color: #0088cc;
+  cursor: pointer; 
 }
