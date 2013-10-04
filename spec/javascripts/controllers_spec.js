@@ -126,5 +126,16 @@ describe('VIN decoder controllers', function() {
       $scope.calculateCarouselWidth("/lamborghini/aventador/2012/oem/2012_lamborghini_aventador_coupe_lp-700-4_detail_oem_2_276.jpg");
       expect($scope.carouselGridWidth).toEqual(5);
     });
+
+    it('should track whether it is loading the resource from the server', function() {
+      $httpBackend.expect('GET', '/vehicles/by_vin/12345').respond({id:1, vin:'12345', make:'Lamborghini'});
+      var ctrl = $controller('VehicleByVinController', {$scope: $scope, $routeParams: {vin: '12345'}});
+
+      expect($scope.loading).toEqual(true);
+
+      $httpBackend.flush();
+
+      expect($scope.loading).toEqual(false);
+    });
   });
 });

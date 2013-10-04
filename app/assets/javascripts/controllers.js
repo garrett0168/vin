@@ -20,9 +20,11 @@ vinApp.controller('VehicleSearchController', ['$scope', '$location', '$http', fu
 
 vinApp.controller('VehicleByVinController', ['$scope', '$routeParams', 'Vehicle', function($scope, $routeParams, Vehicle) {
   $scope.carouselGridWidth = 5;
+  $scope.loading = true;
   $scope.vehicle = Vehicle.get({vin: $routeParams.vin}, 
     function(resource) 
     {
+      $scope.loading = false;
       if(resource && resource.vehicle_images && resource.vehicle_images.length > 0)
       {
         $scope.calculateCarouselWidth(resource.vehicle_images[0].medium_res_url);
@@ -30,6 +32,7 @@ vinApp.controller('VehicleByVinController', ['$scope', '$routeParams', 'Vehicle'
     }, 
     function(response) 
     {
+      $scope.loading = false;
       $scope.vehicle = null;
     });
 
