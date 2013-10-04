@@ -44,3 +44,9 @@ When(/^I click "Details" for VIN "(.*?)"$/) do |vin|
   within("#vin_#{vin}") { click_link_or_button("Details") }
 end
 
+When(/^I should see an image$/) do
+  within("#main-content") do
+    page.should have_xpath("//img")
+  end
+end
+
