@@ -71,6 +71,11 @@ describe Vehicle do
     vehicle2.should have(0).errors_on(:vin)
   end
 
+  it "auto capitalizes the vin" do
+    vehicle = FactoryGirl.create(:vehicle, vin: "asdf1234asdf")
+    vehicle.vin.should == "ASDF1234ASDF"
+  end
+
   describe "vin decoding" do
     before(:each) do
       @vin = "ZHWUC1ZD5DLA01714"

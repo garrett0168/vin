@@ -4,6 +4,10 @@ class Vehicle < ActiveRecord::Base
 
   has_many :vehicle_images
 
+  before_save do
+    vin.upcase!
+  end
+
   def self.decode_vin(api, vin)
     api::get_vehicle_info(vin) do |code, body|
       if code == 200

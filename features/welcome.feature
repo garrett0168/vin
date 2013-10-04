@@ -7,4 +7,4 @@ Feature:  View the homepage
 
 Scenario: As a user, I can view the homepage
     When I visit the home page
-    Then I should see "Welcome"
+    Then I should see "Enter a VIN"
