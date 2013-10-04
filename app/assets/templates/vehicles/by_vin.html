@@ -6,6 +6,18 @@
         <h4 ng-show="vehicle.name">{{ vehicle.make }} {{ vehicle.model }} {{ vehicle.name }}</h4>
       </div>
     </div>
+    <div class="row" ng-show="vehicle.vehicle_images.length > 0">
+      <div class="col-md-5 col-md-offset-3">
+        <carousel interval="-1">
+          <slide ng-repeat="image in vehicle.vehicle_images" active="image.active">
+            <img ng-src="http://media.ed.edmunds-media.com/{{image.medium_res_url}}" style="margin:auto;">
+            <div class="carousel-caption">
+              <p>{{image.caption}}</p>
+            </div>
+          </slide>
+        </carousel>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-4">
         <h6>Make</h6>
@@ -38,19 +50,6 @@
       <div class="col-md-4">
         <h6>Engine Size</h6>
         {{ vehicle.engine_size }}
-      </div>
-    </div>
-    <div class="row" ng-show="vehicle.vehicle_images.length > 0">
-      <div class="col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 col-sm-12 col-xs-12">
-        <h6 class="text-center">Image Gallery</h6>
-        <carousel interval="5000">
-          <slide ng-repeat="image in vehicle.vehicle_images" active="image.active">
-            <img ng-src="http://media.ed.edmunds-media.com/{{image.medium_res_url}}" style="margin:auto;">
-            <div class="carousel-caption">
-              <p>{{image.caption}}</p>
-            </div>
-          </slide>
-        </carousel>
       </div>
     </div>
   </div>
