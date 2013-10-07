@@ -21,7 +21,9 @@ When /^I fill in "([^"]*)" with "([^"]*)"$/ do |page_el, arg|
 end
 
 Then /^(?:I )?(?:click|click on) "([^"]*)"\s*$/ do |the_link|
-  click_link_or_button(the_link)
+  sleeping(2).seconds.between_tries.failing_after(5).tries do
+    click_link_or_button(the_link)
+  end
 end
 
 Given /^the following vehicles:$/ do |vehicles|
@@ -50,3 +52,12 @@ When(/^I should see an image$/) do
   end
 end
 
+Given(/^vin "(.*?)" has no transmission_type$/) do |vin|
+  vehicle = Vehicle.where(vin: vin).first
+  vehicle.update_attributes!(:transmission_type => nil)
+end
+
+Then /^I pause "([^"]*)" seconds$/ do |tm_sec|
+  puts ">>> sleeping #{tm_sec} <<<"
+  sleep tm_sec.to_i
+end

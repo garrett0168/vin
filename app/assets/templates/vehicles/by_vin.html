@@ -43,7 +43,7 @@
         <h6>Trim</h6>
         {{ vehicle.trim }}
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4" ng-show="vehicle.transmission_type">
         <h6>Transmission Type</h6>
         {{ vehicle.transmission_type | humanize }}
       </div>
