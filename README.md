@@ -2,6 +2,8 @@
 
 This is a simple app for decoding VINs and viewing information about the vehicle's make, model, etc... You can also view a list of all historical VIN lookups.
 
+![Codeship status](https://www.codeship.io/projects/e7177af0-11bb-0131-2ecf-527ba1007e3d/status)
+
 Prerequisites
 =============
 
