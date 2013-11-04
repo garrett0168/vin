@@ -58,22 +58,38 @@ vinApp.controller('VehiclesIndexController', ['$scope', 'Vehicles', function($sc
   $scope.totalVehicles = 0;
   $scope.currentPage = 1;
   $scope.vehiclesPerPage = 5;
-  $scope.vehicles = Vehicles.query(function() {
-    $scope.totalVehicles = $scope.vehicles.length;
-  });
-  $scope.vehiclesFiltered = [];
+  $scope.vehicles = [];
 
-  $scope.$watch('currentPage', function() {
-    $scope.filter();
-  });
-
-  $scope.$watch('totalVehicles', function() {
-    $scope.filter();
+  $scope.$watch('currentPage', function(newVal, oldVal) {
+    if(newVal != oldVal)
+    {
+      $scope.getVehicles();
+    }
   });
 
-  $scope.filter = function()
+  $scope.getVehicles = function()
   {
-    var offset = ($scope.currentPage - 1) * $scope.vehiclesPerPage;
-    $scope.vehiclesFiltered = $scope.vehicles.slice( offset, offset+$scope.vehiclesPerPage );
+    $scope.searching = true;
+    var result = Vehicles.get($scope.currentPage, $scope.vehiclesPerPage);
+    result.then(handleGetVehiclesSuccess, handleGetVehiclesFailure).finally(getVehiclesComplete);
   };
+
+  function handleGetVehiclesFailure(response)
+  {
+    $scope.vehicles = [];
+    $scope.errors = response.data.message;
+  };
+
+  function handleGetVehiclesSuccess(response)
+  {
+    $scope.vehicles = response.vehicles;
+    $scope.totalVehicles = response.total;
+  };
+
+  function getVehiclesComplete()
+  {
+    $scope.searching = false;
+  };
+
+  $scope.getVehicles();
 }]);

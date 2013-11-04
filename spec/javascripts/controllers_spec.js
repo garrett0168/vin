@@ -28,7 +28,8 @@ describe('VIN decoder controllers', function() {
 
     it('should query for some vehicles', function() {
       // Expect that the resource (or http) makes a request.
-      $httpBackend.expect('GET', '/vehicles').respond([{id:1, vin:'1234567890'}, {id:2, vin:'2345678901'}]);
+      var vehicles = [{id:1, vin:'1234567890'}, {id:2, vin:'2345678901'}];
+      $httpBackend.expect('GET', '/vehicles?page=1&per_page=5').respond({total: 2, vehicles: vehicles});
     
       var ctrl = $controller('VehiclesIndexController', {$scope: $scope});
     
@@ -37,14 +38,15 @@ describe('VIN decoder controllers', function() {
       // Simulate server response.
       $httpBackend.flush();
     
-      expect($scope.vehicles).toEqualData([{id:1, vin:'1234567890'}, {id:2, vin:'2345678901'}]);
+      expect($scope.vehicles).toEqualData(vehicles);
       expect($scope.totalVehicles).toEqual(2);
     });
 
-    it('should handle pagination locally', function() {
-      $httpBackend.expect('GET', '/vehicles').respond([{id:1, vin:'1234567890'}, {id:2, vin:'2345678901'}, 
-        {id:3, vin:'123'}, {id:4, vin:'456'}, {id:5, vin:'789'},
-        {id:6, vin:'101112'}, {id:7, vin:'131415'}, {id:8, vin:'161718'}]);
+    it('should handle pagination', function() {
+      var vehicles1 = [{id:1, vin:'1234567890'}, {id:2, vin:'2345678901'}, 
+        {id:3, vin:'123'}, {id:4, vin:'456'}, {id:5, vin:'789'}];
+      var vehicles2 = [{id:6, vin:'101112'}, {id:7, vin:'131415'}, {id:8, vin:'161718'}];
+      $httpBackend.expect('GET', '/vehicles?page=1&per_page=5').respond({total: 8, vehicles: vehicles1});
     
       var ctrl = $controller('VehiclesIndexController', {$scope: $scope});
     
@@ -52,13 +54,13 @@ describe('VIN decoder controllers', function() {
       $httpBackend.flush();
 
       // First page
-      $scope.filter();
-      expect($scope.vehiclesFiltered).toEqualData([{id:1, vin:'1234567890'}, {id:2, vin:'2345678901'}, {id:3, vin:'123'}, {id:4, vin:'456'}, {id:5, vin:'789'}]);
+      expect($scope.vehicles).toEqualData(vehicles1);
 
       // Next page
       $scope.currentPage = 2;
-      $scope.filter();
-      expect($scope.vehiclesFiltered).toEqualData([{id:6, vin:'101112'}, {id:7, vin:'131415'}, {id:8, vin:'161718'}]);
+      $httpBackend.expect('GET', '/vehicles?page=2&per_page=5').respond({total: 8, vehicles: vehicles2});
+      $httpBackend.flush();
+      expect($scope.vehicles).toEqualData(vehicles2);
     });
   });
 

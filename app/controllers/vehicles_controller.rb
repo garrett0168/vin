@@ -1,9 +1,12 @@
 class VehiclesController < ApplicationController
 
   def index
-    @vehicles = Vehicle.all
+    total_per_page = params[:per_page] || 5
+    page = params[:page] || 1
+    total_vehicles = Vehicle.count
+    @vehicles = Vehicle.offset(total_per_page.to_i  * (page.to_i - 1)).limit(total_per_page.to_i)
     respond_to do |format|
-      format.json { render json: @vehicles.to_json(:only => [:id, :vin, :make, :model]) }
+      format.json { render json: {total: total_vehicles, vehicles: @vehicles.as_json(:only => [:id, :vin, :make, :model])} }
     end
   end
 

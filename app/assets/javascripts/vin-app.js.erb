@@ -1,10 +1,13 @@
 'use strict';
 
-var vinApp = angular.module('vinApp', ['ngResource', 'ui.bootstrap'])
+var vinApp = angular.module('vinApp', ['ngResource', 'ngRoute', 'ui.bootstrap'])
     .config(['$routeProvider', function($routeProvider, $locationProvider) {
         $routeProvider
             .when('/',     {controller: 'VehicleSearchController',    templateUrl: '<%= asset_path("index.html")%>'})
             .when('/vehicles', {controller: 'VehiclesIndexController',   templateUrl: '<%= asset_path("vehicles/index.html")%>'})
             .when('/vehicles/by_vin/:vin', {controller: 'VehicleByVinController',     templateUrl: '<%= asset_path("vehicles/by_vin.html")%>'})
             .otherwise({redirectTo: '/'});
-    }]);
+    }])
+    .config(['$httpProvider', function($httpProvider) {
+      $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
+    }]);;
