@@ -15,7 +15,7 @@ describe('VIN decoder controllers', function() {
     });
   });
 
-  beforeEach(module('vinApp'));
+  beforeEach(module('vin'));
 
   beforeEach(inject(function($rootScope, _$controller_, _$httpBackend_, _$location_) {
     $scope = $rootScope.$new();
@@ -31,7 +31,7 @@ describe('VIN decoder controllers', function() {
       var vehicles = [{id:1, vin:'1234567890'}, {id:2, vin:'2345678901'}];
       $httpBackend.expect('GET', '/vehicles?page=1&per_page=5').respond({total: 2, vehicles: vehicles});
     
-      var ctrl = $controller('VehiclesIndexController', {$scope: $scope});
+      var ctrl = $controller('IndexController', {$scope: $scope});
     
       expect($scope.vehicles).toEqual([]);
     
@@ -48,7 +48,7 @@ describe('VIN decoder controllers', function() {
       var vehicles2 = [{id:6, vin:'101112'}, {id:7, vin:'131415'}, {id:8, vin:'161718'}];
       $httpBackend.expect('GET', '/vehicles?page=1&per_page=5').respond({total: 8, vehicles: vehicles1});
     
-      var ctrl = $controller('VehiclesIndexController', {$scope: $scope});
+      var ctrl = $controller('IndexController', {$scope: $scope});
     
       // Simulate server response.
       $httpBackend.flush();
@@ -66,12 +66,12 @@ describe('VIN decoder controllers', function() {
 
   describe('VehicleSearchController', function() {
     it('has an empty vin by default', function() {
-      var ctrl = $controller('VehicleSearchController', {$scope: $scope});
+      var ctrl = $controller('SearchController', {$scope: $scope});
       expect($scope.vin).toEqual('');
     });
 
     it('can decode a VIN', function() {
-      var ctrl = $controller('VehicleSearchController', {$scope: $scope});
+      var ctrl = $controller('SearchController', {$scope: $scope});
       $scope.vin = "12345";
 
       $scope.submitVin();
@@ -80,7 +80,7 @@ describe('VIN decoder controllers', function() {
     });
 
     it('can handle typeahead and cache the responses', function() {
-      var ctrl = $controller('VehicleSearchController', {$scope: $scope});
+      var ctrl = $controller('SearchController', {$scope: $scope});
       $httpBackend.expect('GET', '/vehicles/typeahead_vin/Z').respond(["ZHWUC1ZD5DLA01714", "ZQWUC1ZD5DLA01714"]);
       $scope.vinTypeahead("Z");
       $httpBackend.flush();
@@ -108,7 +108,7 @@ describe('VIN decoder controllers', function() {
       // Expect that the resource (or http) makes a request.
       $httpBackend.expect('GET', '/vehicles/by_vin/12345').respond({id:1, vin:'12345', make:'Lamborghini'});
     
-      var ctrl = $controller('VehicleByVinController', {$scope: $scope, $routeParams: {vin: '12345'}});
+      var ctrl = $controller('VehicleController', {$scope: $scope, $routeParams: {vin: '12345'}});
     
       // Simulate server response.
       $httpBackend.flush();
@@ -118,7 +118,7 @@ describe('VIN decoder controllers', function() {
 
     it('should compute the image carousel width based on an image url', function() {
       $httpBackend.expect('GET', '/vehicles/by_vin/12345').respond({id:1, vin:'12345', make:'Lamborghini'});
-      var ctrl = $controller('VehicleByVinController', {$scope: $scope, $routeParams: {vin: '12345'}});
+      var ctrl = $controller('VehicleController', {$scope: $scope, $routeParams: {vin: '12345'}});
 
       $httpBackend.flush();
 
@@ -131,7 +131,7 @@ describe('VIN decoder controllers', function() {
 
     it('should track whether it is loading the resource from the server', function() {
       $httpBackend.expect('GET', '/vehicles/by_vin/12345').respond({id:1, vin:'12345', make:'Lamborghini'});
-      var ctrl = $controller('VehicleByVinController', {$scope: $scope, $routeParams: {vin: '12345'}});
+      var ctrl = $controller('VehicleController', {$scope: $scope, $routeParams: {vin: '12345'}});
 
       expect($scope.loading).toEqual(true);
 

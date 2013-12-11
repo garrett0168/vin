@@ -1,7 +1,7 @@
 'use strict';
 
 describe('filter', function() {
-  beforeEach(module('vinApp'));
+  beforeEach(module('vin'));
 
   describe('humanize', function() {
     it('should humanize a string',

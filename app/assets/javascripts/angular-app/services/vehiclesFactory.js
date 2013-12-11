@@ -1,9 +1,4 @@
-'use strict';
-
-/*vinApp.factory('Vehicles', ['$resource', function($resource) {
-  return $resource('/vehicles');
-}]);*/
-vinApp.factory('Vehicles', ['$http', '$q', function($http, $q) {
+angular.module('vin.services').factory('Vehicles', ['$http', '$q', function($http, $q) {
   var factory = function()
   {
     this.get = function(currentPage, vehiclesPerPage)
@@ -26,8 +21,3 @@ vinApp.factory('Vehicles', ['$http', '$q', function($http, $q) {
 
   return new factory();
 }]);
-
-vinApp.factory('Vehicle', ['$resource', function($resource) {
-  return $resource('/vehicles/by_vin/:vin');
-}]);
-

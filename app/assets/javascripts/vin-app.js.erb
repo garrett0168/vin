@@ -1,13 +1,18 @@
 'use strict';
 
-var vinApp = angular.module('vinApp', ['ngResource', 'ngRoute', 'ui.bootstrap'])
+angular.module('vin.services', []);
+angular.module('vin.controllers', []);
+angular.module('vin.filters', []);
+var vinApp = angular.module('vin', ['ngResource', 'ngRoute', 'ui.bootstrap', 'vin.services', 'vin.controllers', 'vin.filters'])
     .config(['$routeProvider', function($routeProvider, $locationProvider) {
         $routeProvider
-            .when('/',     {controller: 'VehicleSearchController',    templateUrl: '<%= asset_path("index.html")%>'})
-            .when('/vehicles', {controller: 'VehiclesIndexController',   templateUrl: '<%= asset_path("vehicles/index.html")%>'})
-            .when('/vehicles/by_vin/:vin', {controller: 'VehicleByVinController',     templateUrl: '<%= asset_path("vehicles/by_vin.html")%>'})
+            .when('/',     {controller: 'SearchController',    templateUrl: '<%= asset_path("index.html")%>'})
+            .when('/vehicles', {controller: 'IndexController',   templateUrl: '<%= asset_path("vehicles/index.html")%>'})
+            .when('/vehicles/by_vin/:vin', {controller: 'VehicleController',     templateUrl: '<%= asset_path("vehicles/by_vin.html")%>'})
             .otherwise({redirectTo: '/'});
     }])
     .config(['$httpProvider', function($httpProvider) {
       $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
     }]);;
+
+//http://api.geonames.org/findNearbyPostalCodesJSON?lat=47&lng=9&username=garrett0168

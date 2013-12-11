@@ -1,4 +1,4 @@
-vinApp.filter('humanize', function() {
+angular.module('vin.filters').filter('humanize', function() {
   return function(input) 
   {
     if(input)

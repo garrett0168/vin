@@ -20,9 +20,9 @@ module.exports = function(config) {
       'app/assets/javascripts/ui-bootstrap.js',
       'spec/karma/deps/angular-mocks.js',
       'app/assets/javascripts/vin-app.js.erb',
-      'app/assets/javascripts/factories.js',
-      'app/assets/javascripts/controllers.js',
-      'app/assets/javascripts/filters.js',
+      'app/assets/javascripts/angular-app/filters/*.js',
+      'app/assets/javascripts/angular-app/services/*.js',
+      'app/assets/javascripts/angular-app/controllers/*.js',
 
       'spec/javascripts/*.js'
     ],
