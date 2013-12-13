@@ -7,7 +7,12 @@ Vin::Application.routes.draw do
       get 'by_vin/:vin' => 'vehicles#by_vin', :as => "by_vin"
       get 'typeahead_vin/:vin' => 'vehicles#typeahead_vin'
     end
+    member do
+      get 'tmv'
+    end
   end
+
+  get 'reverse_geocoder/lookup' => 'reverse_geocoder#lookup'
 
   # You can have the root of your site routed with "root"
   root 'home#index'

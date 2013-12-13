@@ -28,7 +28,10 @@ end
 
 Given /^the following vehicles:$/ do |vehicles|
   vehicles.hashes.each do |vehicle| 
-    FactoryGirl.create(:vehicle, vehicle)
+    year = vehicle.delete("year")
+    trim = vehicle.delete("trim")
+    newVehicle = FactoryGirl.create(:vehicle, vehicle)
+    newVehicle.styles.create!({year: year, trim: trim, name: trim})
   end
 end
 
@@ -60,4 +63,12 @@ end
 Then /^I pause "([^"]*)" seconds$/ do |tm_sec|
   puts ">>> sleeping #{tm_sec} <<<"
   sleep tm_sec.to_i
+end
+
+Then /^the trim dropdown should( not)? contain "([^"]*)"$/ do |negative, val|  
+  if negative
+    page.should_not have_xpath "//select[@id = 'trim-selector']/option[contains(text(),\"#{val}\")]"
+  else
+    page.should have_xpath "//select[@id = 'trim-selector']/option[contains(text(),\"#{val}\")]"
+  end
 end

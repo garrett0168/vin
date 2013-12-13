@@ -11,55 +11,62 @@
     <div class="row">
       <div class="col-md-12">
         <h2>{{ vehicle.vin }}</h2>
-        <h4 ng-show="vehicle.name">{{ vehicle.make }} {{ vehicle.model }} {{ vehicle.name }}</h4>
+        <h4>{{ selectedStyle.year }} {{ vehicle.make }} {{ vehicle.model }} 
+          <select id="trim-selector" class="form-control" ng-show="selectedStyle" ng-model="selectedStyle" ng-options="s.name for s in vehicle.styles"></select>
+        </h4>
       </div>
     </div>
-    <div class="row" ng-show="vehicle.vehicle_images.length > 0">
-      <div class="col-md-{{carouselGridWidth}} col-md-offset-3">
-        <carousel interval="5000">
-          <slide ng-repeat="image in vehicle.vehicle_images" active="image.active">
+
+    <accordion close-others="false">
+      <accordion-group heading="Engine" is-open="true">
+        <div ng-show="vehicle.transmission_type">
+          <strong>Transmission:</strong> {{ vehicle.transmission_type | humanize }}
+        </div>
+        <div ng-show="vehicle.engine_type">
+          <strong>Engine:</strong> {{ vehicle.engine_type | humanize }}
+        </div>
+        <div ng-show="vehicle.engine_cylinders">
+          <strong>Cylinders:</strong> {{ vehicle.engine_cylinders }}
+        </div>
+        <div ng-show="vehicle.engine_size">
+          <strong>Size:</strong> {{ vehicle.engine_size }}
+        </div>
+      </accordion-group>
+      <accordion-group heading="Colors" is-open="false">
+        <div ng-repeat="color in vehicle.colors" ng-show="vehicle.colors.length > 0">
+          <h6><span style="font-size: 1.2em;">{{ color.category }}</span> - {{ color.name }}</h6>
+        </div>
+        <div ng-show="vehicle.colors.length == 0">
+          No colors available
+        </div>
+      </accordion-group>
+      <accordion-group heading="Available Options" is-open="false">
+        <div ng-repeat="opt in vehicle.options" ng-show="vehicle.options.length > 0">
+          <h6><span style="font-size: 1.2em;">{{ opt.category }} Option ({{ opt.availability }} trims)</span> - {{ opt.name }}. {{ opt.description }}</h6>
+        </div>
+        <div ng-show="vehicle.options.length == 0">
+          No options available
+        </div>        
+      </accordion-group>
+      <accordion-group heading="Gallery" is-open="false">
+        <carousel interval="5000" ng-show="selectedStyle.vehicle_images.length > 0">
+          <slide ng-repeat="image in selectedStyle.vehicle_images" active="image.active">
             <img ng-src="http://media.ed.edmunds-media.com/{{image.medium_res_url}}" style="margin:auto;">
             <div class="carousel-caption">
               <p>{{image.caption}}</p>
             </div>
           </slide>
         </carousel>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <h6>Make</h6>
-        {{ vehicle.make }}
-      </div>
-      <div class="col-md-4">
-        <h6>Model</h6>
-        {{ vehicle.model }}
-      </div>
-      <div class="col-md-4">
-        <h6>Year</h6>
-        {{ vehicle.year }}
-      </div>
-      <div class="col-md-4" ng-show="vehicle.trim">
-        <h6>Trim</h6>
-        {{ vehicle.trim }}
-      </div>
-      <div class="col-md-4" ng-show="vehicle.transmission_type">
-        <h6>Transmission Type</h6>
-        {{ vehicle.transmission_type | humanize }}
-      </div>
-      <div class="col-md-4">
-        <h6>Engine Type</h6>
-        {{ vehicle.engine_type | humanize }}
-      </div>
-      <div class="col-md-4">
-        <h6>Engine Cylinders</h6>
-        {{ vehicle.engine_cylinders }}
-      </div>
-      <div class="col-md-4">
-        <h6>Engine Size</h6>
-        {{ vehicle.engine_size }}
-      </div>
-    </div>
+        <div ng-show="selectedStyle.vehicle_images.length == 0">
+          No images available
+        </div>
+      </accordion-group>
+      <accordion-group heading="Pricing" is-open="false" ng-show="vehicle.tmv">
+        <strong>Base MSRP:</strong> {{ vehicle.tmv.nationalBasePrice.baseMSRP | currency:"$" }}<br/>
+        <strong>Edmund's TMV &reg;:</strong> {{ vehicle.tmv.nationalBasePrice.tmv | currency:"$" }}<br/>
+      </accordion-group>
+    </accordion>
+
     <div class="row extra-top-margin">
       <div class="col-md-12">
         <a class="btn btn-primary" href="#/">Decode Another VIN</a>

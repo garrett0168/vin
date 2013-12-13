@@ -1,3 +1,3 @@
 class VehicleImage < ActiveRecord::Base
-  belongs_to :vehicle
+  belongs_to :style
 end

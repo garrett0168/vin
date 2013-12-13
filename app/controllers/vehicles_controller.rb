@@ -25,7 +25,7 @@ class VehiclesController < ApplicationController
     end
 
     respond_to do |format|
-      format.json { render json: @vehicle.to_json(:include => :vehicle_images), status: @vehicle.nil? ? 404 : 200 }
+      format.json { render json: @vehicle.to_json(:include => [{:styles => {:include => [:vehicle_images]}}, :options, :colors]), status: @vehicle.nil? ? 404 : 200 }
     end
     
   end
@@ -35,6 +35,15 @@ class VehiclesController < ApplicationController
     vehicles = Vehicle.where("vin LIKE :prefix", prefix: "#{vin}%").collect { |v| v.vin }
     respond_to do |format|
       format.json { render json: vehicles }
+    end
+  end
+
+  def tmv
+    @vehicle = Vehicle.find(params[:id])
+    EdmundsAPI.tmv(params[:zip], params[:styleId]) do |code, body|
+      respond_to do |format|
+        format.json { render json: body, status: code }
+      end
     end
   end
 

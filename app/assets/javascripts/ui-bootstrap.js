@@ -20,13 +20,13 @@ angular.module('ui.bootstrap.transition', [])
 
     var transitionEndHandler = function(event) {
       $rootScope.$apply(function() {
-        element.unbind(endEventName, transitionEndHandler);
+        element.off(endEventName, transitionEndHandler);
         deferred.resolve(element);
       });
     };
 
     if (endEventName) {
-      element.bind(endEventName, transitionEndHandler);
+      element.on(endEventName, transitionEndHandler);
     }
 
     // Wrap in a timeout to allow the browser time to update the DOM before the transition is to occur
@@ -83,100 +83,75 @@ angular.module('ui.bootstrap.transition', [])
   return $transition;
 }]);
 
-angular.module('ui.bootstrap.collapse',['ui.bootstrap.transition'])
+angular.module('ui.bootstrap.collapse', ['ui.bootstrap.transition'])
 
-// The collapsible directive indicates a block of html that will expand and collapse
-.directive('collapse', ['$transition', function($transition) {
-  // CSS transitions don't work with height: auto, so we have to manually change the height to a
-  // specific value and then once the animation completes, we can reset the height to auto.
-  // Unfortunately if you do this while the CSS transitions are specified (i.e. in the CSS class
-  // "collapse") then you trigger a change to height 0 in between.
-  // The fix is to remove the "collapse" CSS class while changing the height back to auto - phew!
-  var fixUpHeight = function(scope, element, height) {
-    // We remove the collapse CSS class to prevent a transition when we change to height: auto
-    element.removeClass('collapse');
-    element.css({ height: height });
-    // It appears that  reading offsetWidth makes the browser realise that we have changed the
-    // height already :-/
-    var x = element[0].offsetWidth;
-    element.addClass('collapse');
-  };
+  .directive('collapse', ['$transition', function ($transition, $timeout) {
 
-  return {
-    link: function(scope, element, attrs) {
+    return {
+      link: function (scope, element, attrs) {
 
-      var isCollapsed;
-      var initialAnimSkip = true;
-      scope.$watch(function (){ return element[0].scrollHeight; }, function (value) {
-        //The listener is called when scollHeight changes
-        //It actually does on 2 scenarios: 
-        // 1. Parent is set to display none
-        // 2. angular bindings inside are resolved
-        //When we have a change of scrollHeight we are setting again the correct height if the group is opened
-        if (element[0].scrollHeight !== 0) {
-          if (!isCollapsed) {
-            if (initialAnimSkip) {
-              fixUpHeight(scope, element, element[0].scrollHeight + 'px');
-            } else {
-              fixUpHeight(scope, element, 'auto');
-            }
+        var initialAnimSkip = true;
+        var currentTransition;
+
+        function resetCurrentTransition() {
+          currentTransition = undefined;
+        }
+
+        function doTransition(change) {
+          if (currentTransition) {
+            currentTransition.cancel();
+          }
+          (currentTransition = $transition(element, change)).then(resetCurrentTransition, resetCurrentTransition);
+          return currentTransition;
+        }
+
+        function expand() {
+          if (initialAnimSkip) {
+            initialAnimSkip = false;
+            element.removeClass('collapsing');
+            element.addClass('collapse in');
+            element.css({height: 'auto'});
+          } else {
+            element.removeClass('collapse').addClass('collapsing');
+            doTransition({ height: element[0].scrollHeight + 'px' }).then(function () {
+              element.removeClass('collapsing');
+              element.addClass('collapse in');
+              element.css({height: 'auto'});
+            });
           }
         }
-      });
-      
-      scope.$watch(attrs.collapse, function(value) {
-        if (value) {
-          collapse();
-        } else {
-          expand();
-        }
-      });
-      
 
-      var currentTransition;
-      var doTransition = function(change) {
-        if ( currentTransition ) {
-          currentTransition.cancel();
-        }
-        currentTransition = $transition(element,change);
-        currentTransition.then(
-          function() { currentTransition = undefined; },
-          function() { currentTransition = undefined; }
-        );
-        return currentTransition;
-      };
+        function collapse() {
+          if (initialAnimSkip) {
+            initialAnimSkip = false;
+            element.removeClass('collapsing');
+            element.addClass('collapse');
+            element.css({height: 0});
+          } else {
+            // CSS transitions don't work with height: auto, so we have to manually change the height to a specific value
+            element.css({ height: element[0].scrollHeight + 'px' });
+            //trigger reflow so a browser relaizes that height was updated from auto to a specific value
+            var x = element[0].offsetWidth;
 
-      var expand = function() {
-        if (initialAnimSkip) {
-          initialAnimSkip = false;
-          if ( !isCollapsed ) {
-            fixUpHeight(scope, element, 'auto');
+            element.removeClass('collapse in').addClass('collapsing');
+
+            doTransition({ height: 0 }).then(function () {
+              element.removeClass('collapsing');
+              element.addClass('collapse');
+            });
           }
-        } else {
-          doTransition({ height : element[0].scrollHeight + 'px' })
-          .then(function() {
-            // This check ensures that we don't accidentally update the height if the user has closed
-            // the group while the animation was still running
-            if ( !isCollapsed ) {
-              fixUpHeight(scope, element, 'auto');
-            }
-          });
         }
-        isCollapsed = false;
-      };
-      
-      var collapse = function() {
-        isCollapsed = true;
-        if (initialAnimSkip) {
-          initialAnimSkip = false;
-          fixUpHeight(scope, element, 0);
-        } else {
-          fixUpHeight(scope, element, element[0].scrollHeight + 'px');
-          doTransition({'height':'0'});
-        }
-      };
-    }
-  };
+
+        scope.$watch(attrs.collapse, function (shouldCollapse) {
+          if (shouldCollapse) {
+            collapse();
+          } else {
+            expand();
+          }
+        });
+
+      }
+    };
 }]);
 
 angular.module('ui.bootstrap.accordion', ['ui.bootstrap.collapse'])
@@ -3309,16 +3284,21 @@ angular.module('ui.bootstrap.typeahead', ['ui.bootstrap.position', 'ui.bootstrap
   });
 angular.module("template/accordion/accordion-group.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("template/accordion/accordion-group.html",
-    "<div class=\"accordion-group\">\n" +
-    "  <div class=\"accordion-heading\" ><a class=\"accordion-toggle\" ng-click=\"isOpen = !isOpen\" accordion-transclude=\"heading\">{{heading}}</a></div>\n" +
-    "  <div class=\"accordion-body\" collapse=\"!isOpen\">\n" +
-    "    <div class=\"accordion-inner\" ng-transclude></div>  </div>\n" +
+    "<div class=\"panel panel-default\">\n" +
+    "  <div class=\"panel-heading\">\n" +
+    "    <h4 class=\"panel-title\">\n" + 
+    "      <a href=\"\" class=\"accordion-toggle\" ng-click=\"isOpen = !isOpen\" accordion-transclude=\"heading\">{{heading}}</a>\n" +
+    "    </h4>\n" +
+    "  </div>\n" +
+    "  <div class=\"panel-collapse\" collapse=\"!isOpen\">\n" +
+    "    <div class=\"panel-body\" ng-transclude></div>\n" +
+    "  </div>\n" +
     "</div>");
 }]);
 
 angular.module("template/accordion/accordion.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("template/accordion/accordion.html",
-    "<div class=\"accordion\" ng-transclude></div>");
+    "<div class=\"panel-group\" ng-transclude></div>");
 }]);
 
 angular.module("template/alert/alert.html", []).run(["$templateCache", function($templateCache) {

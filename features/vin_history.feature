@@ -27,7 +27,7 @@ Scenario: As a user, I can view the details of a VIN
     And I should see "Ford"
     And I should see "Focus"
     And I should see "2011"
-    And I should see "Base"
+    And the trim dropdown should contain "Base"
     And I should see "Automatic"
     And I should see "Gas"
     And I should see "4"

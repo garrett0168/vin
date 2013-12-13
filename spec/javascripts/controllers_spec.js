@@ -104,20 +104,21 @@ describe('VIN decoder controllers', function() {
   });
 
   describe('VehicleByVinController', function() {
+    var lambo = {id:1, vin:'12345', make:'Lamborghini', styles:[{id:1,edmunds_id:"123",name:"Lambo",body:"Coupe",year:2013}], options:[], colors:[]};
     it('should automatically load the vehicle', function() {
       // Expect that the resource (or http) makes a request.
-      $httpBackend.expect('GET', '/vehicles/by_vin/12345').respond({id:1, vin:'12345', make:'Lamborghini'});
+      $httpBackend.expect('GET', '/vehicles/by_vin/12345?query=%7B%22method%22:%22GET%22,%22isArray%22:false%7D').respond(lambo);
     
       var ctrl = $controller('VehicleController', {$scope: $scope, $routeParams: {vin: '12345'}});
     
       // Simulate server response.
       $httpBackend.flush();
     
-      expect($scope.vehicle).toEqualData({id:1, vin:'12345', make:'Lamborghini'});
+      expect($scope.vehicle).toEqualData(lambo);
     });
 
     it('should compute the image carousel width based on an image url', function() {
-      $httpBackend.expect('GET', '/vehicles/by_vin/12345').respond({id:1, vin:'12345', make:'Lamborghini'});
+      $httpBackend.expect('GET', '/vehicles/by_vin/12345?query=%7B%22method%22:%22GET%22,%22isArray%22:false%7D').respond(lambo);
       var ctrl = $controller('VehicleController', {$scope: $scope, $routeParams: {vin: '12345'}});
 
       $httpBackend.flush();
@@ -130,7 +131,7 @@ describe('VIN decoder controllers', function() {
     });
 
     it('should track whether it is loading the resource from the server', function() {
-      $httpBackend.expect('GET', '/vehicles/by_vin/12345').respond({id:1, vin:'12345', make:'Lamborghini'});
+      $httpBackend.expect('GET', '/vehicles/by_vin/12345?query=%7B%22method%22:%22GET%22,%22isArray%22:false%7D').respond(lambo);
       var ctrl = $controller('VehicleController', {$scope: $scope, $routeParams: {vin: '12345'}});
 
       expect($scope.loading).toEqual(true);

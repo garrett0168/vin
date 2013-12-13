@@ -80,3 +80,9 @@ body {
 #loading {
   margin-top: 50px;
 }
+
+#trim-selector {
+  width: auto;
+  display: inline;
+  margin-left: 10px;
+}

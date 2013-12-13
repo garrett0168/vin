@@ -1,0 +1,248 @@
+{
+   "make":{
+      "id":200001398,
+      "name":"Hyundai",
+      "niceName":"hyundai"
+   },
+   "model":{
+      "id":"Hyundai_Sonata",
+      "name":"Sonata",
+      "niceName":"sonata"
+   },
+   "engine":{
+      "equipmentType":"ENGINE",
+      "availability":"STANDARD",
+      "compressionRatio":11.3,
+      "cylinder":4,
+      "size":2.4,
+      "displacement":2359.0,
+      "configuration":"inline",
+      "fuelType":"regular unleaded",
+      "totalValves":16,
+      "manufacturerEngineCode":"Theta II",
+      "type":"gas",
+      "code":"4INAG2.4",
+      "compressorType":"NA"
+   },
+   "transmission":{
+      "id":"200417738",
+      "name":"6A",
+      "equipmentType":"TRANSMISSION",
+      "availability":"STANDARD",
+      "automaticType":"Shiftable automatic",
+      "transmissionType":"AUTOMATIC",
+      "numberOfSpeeds":"6"
+   },
+   "drivenWheels":"front wheel drive",
+   "numOfDoors":"4",
+   "options":[
+      {
+         "category":"Interior",
+         "options":[
+            {
+               "id":"200417773",
+               "name":"Cargo Net(_)",
+               "equipmentType":"OPTION",
+               "availability":"All"
+            },
+            {
+               "id":"200417778",
+               "name":"All-Weather Floor Mats(_)",
+               "equipmentType":"OPTION",
+               "availability":"All"
+            },
+            {
+               "id":"200417779",
+               "name":"ECM w/ Homelink and Compass(_)",
+               "equipmentType":"OPTION",
+               "availability":"GLS & SE"
+            },
+            {
+               "id":"200417777",
+               "name":"Carpeted Floor Mats(_)",
+               "equipmentType":"OPTION",
+               "availability":"All"
+            },
+            {
+               "id":"200417776",
+               "name":"Cargo Mat(_)",
+               "equipmentType":"OPTION",
+               "availability":"All"
+            }
+         ]
+      },
+      {
+         "category":"Mechanical",
+         "options":[
+            {
+               "id":"200417780",
+               "name":"Remote Start(_)",
+               "equipmentType":"OPTION",
+               "availability":"All"
+            }
+         ]
+      },
+      {
+         "category":"Package",
+         "options":[
+            {
+               "id":"200417767",
+               "name":"GLS Popular Equipment Package(_)",
+               "description":"Vehicle with standard equipment; Power driver seat; Driver's lumbar support; Automatic headlight control; Chrome interior door handles; Leatherette interior panel door inserts; Front fog lights; Heated front seats",
+               "equipmentType":"OPTION",
+               "availability":"GLS A/T"
+            },
+            {
+               "id":"200417781",
+               "name":"Option Group 01(_)",
+               "description":"Vehicle with standard equipment",
+               "equipmentType":"OPTION",
+               "availability":"All"
+            }
+         ]
+      },
+      {
+         "category":"Exterior",
+         "options":[
+            {
+               "id":"200417771",
+               "name":"Wheel Locks(_)",
+               "equipmentType":"OPTION",
+               "availability":"All"
+            },
+            {
+               "id":"200417975",
+               "name":"Rear Lip Spoiler",
+               "equipmentType":"OPTION",
+               "availability":"All"
+            },
+            {
+               "id":"200417772",
+               "name":"Rear Bumper Applique(_)",
+               "equipmentType":"OPTION",
+               "availability":"All"
+            },
+            {
+               "id":"200417774",
+               "name":"Mud Guards(_)",
+               "equipmentType":"OPTION",
+               "availability":"All"
+            }
+         ]
+      }
+   ],
+   "colors":[
+      {
+         "category":"Interior",
+         "options":[
+            {
+               "id":"200417751",
+               "name":"Camel Cloth",
+               "equipmentType":"COLOR",
+               "availability":"USED"
+            },
+            {
+               "id":"200417750",
+               "name":"Gray Cloth",
+               "equipmentType":"COLOR",
+               "availability":"USED"
+            }
+         ]
+      },
+      {
+         "category":"Exterior",
+         "options":[
+            {
+               "id":"200417742",
+               "name":"P3 | Harbor Grey Metallic (E)",
+               "equipmentType":"COLOR",
+               "availability":"USED"
+            },
+            {
+               "id":"200417747",
+               "name":"WJ | Shimmering White (E)",
+               "equipmentType":"COLOR",
+               "availability":"USED"
+            },
+            {
+               "id":"200417743",
+               "name":"7B | Midnight Black (E)",
+               "equipmentType":"COLOR",
+               "availability":"USED"
+            },
+            {
+               "id":"200417745",
+               "name":"T3 | Pacific Blue Pearl (E)",
+               "equipmentType":"COLOR",
+               "availability":"USED"
+            },
+            {
+               "id":"200417748",
+               "name":"Y4 | Indigo Night (E)",
+               "equipmentType":"COLOR",
+               "availability":"USED"
+            },
+            {
+               "id":"200417749",
+               "name":"Z3 | Iridescent Silver Blue Pearl (E)",
+               "equipmentType":"COLOR",
+               "availability":"USED"
+            },
+            {
+               "id":"200417744",
+               "name":"SM | Radiant Silver (E)",
+               "equipmentType":"COLOR",
+               "availability":"USED"
+            },
+            {
+               "id":"200417746",
+               "name":"T4 | Sparkling Ruby (E)",
+               "equipmentType":"COLOR",
+               "availability":"USED"
+            }
+         ]
+      }
+   ],
+   "manufacturer":"Hyundai Motor Corporation",
+   "categories":{
+      "EPAClass":"Large Cars",
+      "primaryBodyType":"Car",
+      "vehicleStyle":"Sedan",
+      "vehicleType":"Car"
+   },
+   "vin":"5NPEB4AC7DH689916",
+   "squishVin":"5NPEB4ACDH",
+   "years":[
+      {
+         "id":200417701,
+         "year":2013,
+         "styles":[
+            {
+               "id":200417702,
+               "name":"GLS 4dr Sedan (2.4L 4cyl 6A)",
+               "submodel":{
+                  "body":"Sedan",
+                  "modelName":"Sonata Sedan",
+                  "niceName":"sedan"
+               },
+               "trim":"GLS"
+            },
+            {
+               "id":200417703,
+               "name":"GLS PZEV 4dr Sedan (2.4L 4cyl 6A) ",
+               "submodel":{
+                  "body":"Sedan",
+                  "modelName":"Sonata Sedan",
+                  "niceName":"sedan"
+               },
+               "trim":"GLS PZEV"
+            }
+         ]
+      }
+   ],
+   "matchingType":"SQUISHVIN",
+   "MPG":{
+      "highway":"35",
+      "city":"24"
+   }
+}

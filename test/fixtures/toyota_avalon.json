@@ -1,0 +1,124 @@
+{
+   "make":{
+      "id":200003381,
+      "name":"Toyota",
+      "niceName":"toyota"
+   },
+   "model":{
+      "id":"Toyota_Avalon",
+      "name":"Avalon",
+      "niceName":"avalon"
+   },
+   "transmission":{
+      "id":"200418106",
+      "name":"6A",
+      "equipmentType":"TRANSMISSION",
+      "availability":"STANDARD",
+      "automaticType":"Shiftable automatic",
+      "transmissionType":"AUTOMATIC",
+      "numberOfSpeeds":"6"
+   },
+   "drivenWheels":"front wheel drive",
+   "numOfDoors":"4",
+   "options":[
+      {
+         "category":"Additional Fees",
+         "options":[
+            {
+               "id":"200442180",
+               "name":"50 State Emissions",
+               "equipmentType":"OPTION",
+               "availability":"All"
+            }
+         ]
+      },
+      {
+         "category":"Package",
+         "options":[
+            {
+               "id":"200442248",
+               "name":"Preferred Accessory Package",
+               "description":"Front and rear floor and cargo carpet mats; Cargo net; Rear bumper applique",
+               "equipmentType":"OPTION",
+               "availability":"All"
+            }
+         ]
+      },
+      {
+         "category":"Exterior",
+         "options":[
+            {
+               "id":"200442242",
+               "name":"Wheel Locks",
+               "equipmentType":"OPTION",
+               "availability":"All"
+            }
+         ]
+      }
+   ],
+   "colors":[
+      {
+         "category":"Interior",
+         "options":[
+            {
+               "id":"200442176",
+               "name":"Black Leather",
+               "equipmentType":"COLOR",
+               "availability":"USED"
+            }
+         ]
+      },
+      {
+         "category":"Exterior",
+         "options":[
+            {
+               "id":"200442170",
+               "name":"Attitude Black Metallic",
+               "equipmentType":"COLOR",
+               "availability":"USED"
+            }
+         ]
+      }
+   ],
+   "manufacturerCode":"3548",
+   "price":{
+      "baseMSRP":35500.0,
+      "baseInvoice":31950.0,
+      "deliveryCharges":810.0,
+      "usedTmvRetail":31476.0,
+      "usedPrivateParty":30122.0,
+      "usedTradeIn":28327.0,
+      "estimateTmv":false
+   },
+   "categories":{
+      "EPAClass":"Midsize Cars",
+      "primaryBodyType":"Car",
+      "vehicleStyle":"Sedan",
+      "vehicleType":"Car"
+   },
+   "vin":"4T1BK1EB6DU056165",
+   "squishVin":"4T1BK1EBDU",
+   "years":[
+      {
+         "id":200418086,
+         "year":2013,
+         "styles":[
+            {
+               "id":200442097,
+               "name":"XLE Touring 4dr Sedan (3.5L 6cyl 6A)",
+               "submodel":{
+                  "body":"Sedan",
+                  "modelName":"Avalon Sedan",
+                  "niceName":"sedan"
+               },
+               "trim":"XLE Touring"
+            }
+         ]
+      }
+   ],
+   "matchingType":"VIN",
+   "MPG":{
+      "highway":"31",
+      "city":"21"
+   }
+}
