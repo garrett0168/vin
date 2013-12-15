@@ -6,10 +6,6 @@ angular.module('vin.controllers').controller('VehicleController', ['$scope', '$r
     function(resource) 
     {
       $scope.loading = false;
-      /*if(resource && resource.vehicle_images && resource.vehicle_images.length > 0)
-      {
-        $scope.calculateCarouselWidth(resource.vehicle_images[0].medium_res_url);
-      }*/
       
       if(resource.styles.length > 0)
       {
@@ -39,12 +35,11 @@ angular.module('vin.controllers').controller('VehicleController', ['$scope', '$r
     }
   };
 
-  $scope.geolocationAvailable = navigator.geolocation ? true : false;
   $scope.currentZip = null;
   $scope.vehicleTmv = null;
 
   function onCreate() {
-    if($scope.geolocationAvailable)
+    if(Modernizr.geolocation)
     {
       navigator.geolocation.getCurrentPosition(function(position) {
         var latitude = position.coords.latitude;
